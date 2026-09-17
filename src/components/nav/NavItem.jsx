@@ -1,11 +1,15 @@
-import NavLink from './NavLink'
+import NavLink from './NavLink';
 
-const NavItem = ({href, name, isActive}) => {
+/**
+ * NavItem component
+ * Functional component passing props to NavLink
+ */
+const NavItem = ({ href, name, onClick }) => {
   return (
-    <li className="flex items-center">
-      <NavLink href={href} name={name} isActive={isActive} />
+    <li className="flex items-center" onClick={onClick}>
+      <NavLink href={href} name={name} />
     </li>
-  )
-}
+  );
+};
 
-export default NavItem
+export default NavItem;
