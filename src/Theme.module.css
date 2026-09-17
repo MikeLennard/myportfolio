@@ -1,0 +1,24 @@
+.primary {
+  background-color: #2563eb;
+  color: white;
+}
+
+.secondary {
+  background-color: #e5e7eb;
+  color: #1f2937;
+}
+
+.success {
+  background-color: #053525;
+  color: white;
+}
+
+.warning {
+  background-color: #2b706e;
+  color: white;
+}
+
+.danger {
+  background-color: #e47278;
+  color: white;
+}
