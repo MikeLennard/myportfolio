@@ -9,7 +9,7 @@ export const personalInfo = {
   avatar: "/profile.jpg",
   availableForHire: true,
   socialLinks: {
-    github: "https://github.com",
+    github: "https://github.com/MikeLennard",
     linkedin: "https://www.linkedin.com/in/mike-lennard-dela-cruz-0816381b8",
     twitter: "https://twitter.com",
     discord: "https://discord.com"
@@ -27,7 +27,7 @@ export const projectsData = [
   {
     id: "proj-1",
     title: "DevPulse - Developer Social Dashboard",
-    category: "Full Stack",
+    category: "Groupings",
     shortDesc: "A real-time developer community hub with post feeds, tech discussions, code snippet sharing, and user profiles.",
     fullDesc: "DevPulse is a full-featured collaborative platform built for developers to connect, showcase their work, and share code snippets with syntax highlighting. Includes user authentication, live comments, upvotes, and markdown support.",
     image: "https://images.unsplash.com/photo-1555066931-4365d14bab8c?auto=format&fit=crop&w=800&q=80",
@@ -40,7 +40,7 @@ export const projectsData = [
   {
     id: "proj-2",
     title: "ApexShop - Modern E-Commerce Experience",
-    category: "Frontend",
+    category: "Personal",
     shortDesc: "Sleek e-commerce storefront with product filters, dynamic cart management, and seamless mock checkout flow.",
     fullDesc: "ApexShop features a fluid product catalog with instant category filtering, price range sorting, dynamic cart drawer, and responsive product detail views. Built with optimized component re-rendering and accessible UI patterns.",
     image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=800&q=80",
@@ -53,7 +53,7 @@ export const projectsData = [
   {
     id: "proj-3",
     title: "CryptoTrack - Real-Time Crypto Analytics",
-    category: "Frontend",
+    category: "Personal",
     shortDesc: "Interactive financial dashboard tracking live cryptocurrency prices, market caps, and interactive trend charts.",
     fullDesc: "A high-performance crypto tracking dashboard consuming live WebSocket and REST APIs. Features sparkline market trends, portfolio tracking calculator, and price alert simulations.",
     image: "https://images.unsplash.com/photo-1621416894569-0f39ed31d247?auto=format&fit=crop&w=800&q=80",
@@ -66,7 +66,7 @@ export const projectsData = [
   {
     id: "proj-4",
     title: "TaskFlow - Kanban Project Board",
-    category: "Full Stack",
+    category: "Groupings",
     shortDesc: "Agile project board with drag-and-drop workflow stages, task prioritization, and team activity logs.",
     fullDesc: "A productivity management tool designed for fast-paced software teams. Allows creating sprint boards, assigning priority tags, tracking deadlines, and filtering tasks by assignee.",
     image: "https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?auto=format&fit=crop&w=800&q=80",
@@ -79,7 +79,7 @@ export const projectsData = [
   {
     id: "proj-5",
     title: "AuraUI - Modern Component Design System",
-    category: "UI/UX",
+    category: "Personal",
     shortDesc: "A crafted collection of accessible, glassmorphic React UI components and micro-interactions.",
     fullDesc: "AuraUI is an open-source design system focusing on fluid animations, glassmorphic card overlays, accessible modal systems, and responsive navigations. Includes interactive documentation and copy-paste code snippets.",
     image: "https://images.unsplash.com/photo-1507238691740-187a5b1d37b8?auto=format&fit=crop&w=800&q=80",
@@ -92,7 +92,7 @@ export const projectsData = [
   {
     id: "proj-6",
     title: "WeatherSphere - Global Radar & Forecasts",
-    category: "Mobile/APIs",
+    category: "Groupings",
     shortDesc: "Geolocation weather station providing hourly forecasts, UV index, wind maps, and atmospheric alerts.",
     fullDesc: "A clean, data-driven weather application utilizing OpenWeatherMap API and browser geolocation. Features dynamic gradient backgrounds that adjust based on current local weather conditions and time of day.",
     image: "https://images.unsplash.com/photo-1504608524841-42fe6f032b4b?auto=format&fit=crop&w=800&q=80",

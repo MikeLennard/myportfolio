@@ -18,9 +18,9 @@ export default function Projects() {
   const [searchQuery, setSearchQuery] = useState('');
   const [selectedProject, setSelectedProject] = useState(null);
 
-  // Extract unique categories
+  // Project categories
   const categories = useMemo(() => {
-    return ['All', ...new Set(projectsData.map((p) => p.category))];
+    return ['All', 'Personal', 'Groupings'];
   }, []);
 
   // Filter projects based on active category and search query
@@ -42,7 +42,6 @@ export default function Projects() {
     <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 animate-fadeIn">
       {/* Header Section */}
       <div className="text-center max-w-3xl mx-auto mb-10">
-        <Badge text="Portfolio Gallery" variant="primary" size="md" />
         <h1 className="text-4xl sm:text-5xl font-extrabold text-white mt-3 mb-4 tracking-tight">
           Featured <span className="gradient-text">Projects & Work</span>
         </h1>

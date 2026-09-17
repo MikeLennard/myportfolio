@@ -20,8 +20,7 @@ export default function QuickSkills({ skills }) {
   return (
     <section className="py-12 border-t border-[#2B5748]">
       <div className="text-center max-w-2xl mx-auto mb-8">
-        <Badge text="Technologies" variant="primary" size="sm" />
-        <h2 className="text-3xl font-extrabold text-white mt-2">Technical Proficiency</h2>
+        <h2 className="text-3xl font-extrabold text-white mt-2">TechStack & Tools</h2>
         <p className="text-sm text-[#CBD5C0] mt-1">
           Languages, frameworks, and developer toolkits I work with daily
         </p>
@@ -34,11 +33,10 @@ export default function QuickSkills({ skills }) {
             <button
               key={tab.key}
               onClick={() => setActiveTab(tab.key)}
-              className={`px-4 py-2 rounded-xl text-xs font-semibold transition-all cursor-pointer ${
-                activeTab === tab.key
-                  ? 'bg-[#2B5748] text-[#9CB080] border border-[#9CB080]/40 shadow-md'
-                  : 'text-[#CBD5C0] hover:text-white'
-              }`}
+              className={`px-4 py-2 rounded-xl text-xs font-semibold transition-all cursor-pointer ${activeTab === tab.key
+                ? 'bg-[#2B5748] text-[#9CB080] border border-[#9CB080]/40 shadow-md'
+                : 'text-[#CBD5C0] hover:text-white'
+                }`}
             >
               {tab.label}
             </button>

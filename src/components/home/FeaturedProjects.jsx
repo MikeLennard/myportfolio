@@ -14,7 +14,6 @@ export default function FeaturedProjects({ projects = [], onSelectProject }) {
         <div>
           <span className="text-xs font-semibold uppercase tracking-wider text-[#9CB080]">Highlights</span>
           <h2 className="text-3xl font-extrabold text-white mt-1">Featured Works</h2>
-          <p className="text-sm text-[#CBD5C0] mt-1">Selected builds demonstrating architecture, scalability, and UX design</p>
         </div>
 
         <Link

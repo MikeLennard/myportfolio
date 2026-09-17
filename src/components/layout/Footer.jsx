@@ -97,12 +97,8 @@ export default function Footer() {
         </div>
 
         {/* Bottom Bar */}
-        <div className="pt-8 border-t border-[#2B5748]/60 flex flex-col sm:flex-row items-center justify-between text-xs text-[#CBD5C0] gap-4">
+        <div className="pt-8 border-t border-[#2B5748]/60 flex items-center justify-center text-xs text-[#CBD5C0]">
           <p>© {currentYear} {personalInfo.name}. All rights reserved.</p>
-          <div className="flex items-center gap-4">
-            <span className="bg-[#2B5748]/60 px-3 py-1 rounded-full border border-[#618764]/30 text-[#CBD5C0]">React JS 19 + Custom CSS</span>
-            <span className="text-[#9CB080] font-medium">CS / IT Portfolio Assignment</span>
-          </div>
         </div>
       </div>
     </footer>

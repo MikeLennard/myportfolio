@@ -1,98 +1,56 @@
-import Badge from '../common/Badge';
+import TechIcon from '../common/TechIcon';
 
 /**
  * ProjectCard Component
+ * Simplified layout: image, title with view details, and technologies used
  * Styled with custom palette (#9CB080, #618764, #2B5748, #273338)
  */
 export default function ProjectCard({ project, onSelectProject }) {
-  const { title, category, shortDesc, image, tags, github, demo, featured } = project;
+  const { title, image, tags = [] } = project;
 
   return (
-    <div className="glass-panel rounded-2xl overflow-hidden flex flex-col group transition-all duration-300 hover:-translate-y-1.5 hover:border-[#9CB080]/50">
+    <div
+      onClick={() => onSelectProject(project)}
+      onKeyDown={(e) => {
+        if (e.key === 'Enter' || e.key === ' ') {
+          e.preventDefault();
+          onSelectProject(project);
+        }
+      }}
+      role="button"
+      tabIndex={0}
+      aria-label={`View details for ${title}`}
+      className="glass-panel rounded-2xl overflow-hidden flex flex-col group transition-all duration-300 hover:-translate-y-1.5 hover:border-[#9CB080]/50 cursor-pointer focus:outline-none focus:ring-2 focus:ring-[#9CB080]/60"
+    >
       {/* Thumbnail Banner */}
       <div className="relative h-48 overflow-hidden bg-[#273338]">
         <img
           src={image}
           alt={title}
-          className="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-500 opacity-85 group-hover:opacity-100"
+          className="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-500 opacity-90 group-hover:opacity-100"
           loading="lazy"
         />
         <div className="absolute inset-0 bg-gradient-to-t from-[#273338] via-transparent to-transparent"></div>
-
-        {/* Category & Featured Badges */}
-        <div className="absolute top-3 left-3 flex gap-2">
-          <Badge text={category} variant="primary" size="sm" />
-          {featured && (
-            <Badge
-              text="Featured"
-              variant="warning"
-              size="sm"
-              icon={
-                <svg className="w-3 h-3 text-amber-300 fill-current" viewBox="0 0 20 20">
-                  <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
-                </svg>
-              }
-            />
-          )}
-        </div>
       </div>
 
-      {/* Content */}
-      <div className="p-6 flex-1 flex flex-col justify-between">
-        <div>
-          <h3 className="text-xl font-bold text-white mb-2 group-hover:text-[#9CB080] transition-colors">
-            {title}
-          </h3>
-          <p className="text-[#CBD5C0] text-sm leading-relaxed mb-4 line-clamp-2">
-            {shortDesc}
-          </p>
+      {/* Content Area */}
+      <div className="p-5 flex-1 flex flex-col justify-between gap-3.5">
+        {/* Full-width Title */}
+        <h3 className="text-base sm:text-lg font-bold text-white group-hover:text-[#9CB080] transition-colors leading-snug">
+          {title}
+        </h3>
 
-          {/* Tags */}
-          <div className="flex flex-wrap gap-1.5 mb-6">
-            {tags.slice(0, 4).map((tag, idx) => (
-              <Badge key={idx} text={tag} variant="default" size="sm" />
-            ))}
-            {tags.length > 4 && (
-              <span className="text-xs text-[#CBD5C0] self-center">+{tags.length - 4} more</span>
-            )}
-          </div>
-        </div>
-
-        {/* Actions */}
-        <div className="pt-4 border-t border-[#2B5748] flex items-center justify-between gap-2">
-          <button
-            type="button"
-            onClick={() => onSelectProject(project)}
-            className="text-xs font-semibold text-[#9CB080] hover:text-white flex items-center gap-1 cursor-pointer transition-colors"
-          >
-            <span>View Details</span>
-            <span>→</span>
-          </button>
-
-          <div className="flex items-center gap-3">
-            {github && (
-              <a
-                href={github}
-                target="_blank"
-                rel="noreferrer"
-                className="text-[#CBD5C0] hover:text-white transition-colors text-sm"
-                title="GitHub Repository"
-              >
-                Code ↗
-              </a>
-            )}
-            {demo && (
-              <a
-                href={demo}
-                target="_blank"
-                rel="noreferrer"
-                className="px-3 py-1 text-xs font-medium rounded-lg bg-[#618764] hover:bg-[#9CB080] hover:text-[#273338] text-white transition-all"
-                title="Live Demo"
-              >
-                Demo
-              </a>
-            )}
-          </div>
+        {/* Technologies Used with SVG Icons */}
+        <div className="flex flex-wrap items-center gap-1.5 pt-1">
+          {tags.map((tag, idx) => (
+            <span
+              key={idx}
+              className="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-lg text-[11px] font-medium bg-[#273338] text-[#CBD5C0] border border-[#2B5748] group-hover:border-[#618764]/60 transition-colors"
+            >
+              <TechIcon name={tag} className="w-3.5 h-3.5" />
+              <span>{tag}</span>
+            </span>
+          ))}
         </div>
       </div>
     </div>
