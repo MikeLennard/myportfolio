@@ -1,17 +1,32 @@
+import { useState, useEffect } from 'react';
 import Timeline from '../components/about/Timeline';
 import SkillsMatrix from '../components/about/SkillsMatrix';
+import CertificateCard from '../components/certificates/CertificateCard';
+import CertificateModal from '../components/certificates/CertificateModal';
 import Badge from '../components/common/Badge';
-import { personalInfo, educationAndTimeline, skillsData } from '../data/portfolioData';
+import { personalInfo, educationAndTimeline, skillsData, certificatesData } from '../data/portfolioData';
 
 /**
  * About Page Component
  * Demonstrates:
  * - Functional Component
  * - Props support (`props.class`)
- * - Composition of child components (Timeline, SkillsMatrix, Badges)
+ * - Composition of child components (Timeline, SkillsMatrix, Certificates, Badges)
  * - Custom CSS + Tailwind styling
  */
 const About = (props) => {
+  const [selectedCertificate, setSelectedCertificate] = useState(null);
+
+  useEffect(() => {
+    if (window.location.hash === '#certificates') {
+      const el = document.getElementById('certificates');
+      if (el) {
+        setTimeout(() => {
+          el.scrollIntoView({ behavior: 'smooth' });
+        }, 150);
+      }
+    }
+  }, []);
   const principles = [
     {
       icon: (
@@ -68,7 +83,7 @@ const About = (props) => {
       <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 mb-12 items-center">
         {/* Bio Text */}
         <div className="lg:col-span-7 glass-panel p-8 rounded-3xl space-y-4">
-          <span className="text-xs uppercase tracking-wider text-indigo-400 font-semibold">
+          <span className="text-xs uppercase tracking-wider text-[#9CB080] font-semibold">
             Background & Ambition
           </span>
           <h2 className="text-2xl sm:text-3xl font-bold text-white">
@@ -139,7 +154,7 @@ const About = (props) => {
       {/* Engineering Principles */}
       <div className="mb-14">
         <div className="text-center mb-8">
-          <span className="text-xs font-semibold uppercase tracking-wider text-indigo-400">Methodology</span>
+          <span className="text-xs font-semibold uppercase tracking-wider text-[#9CB080]">Methodology</span>
           <h2 className="text-2xl font-bold text-white mt-1">Core Principles</h2>
         </div>
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5">
@@ -160,7 +175,7 @@ const About = (props) => {
         {/* Timeline on the Left */}
         <div className="lg:col-span-7">
           <div className="mb-6">
-            <span className="text-xs font-semibold uppercase tracking-wider text-indigo-400">Milestones</span>
+            <span className="text-xs font-semibold uppercase tracking-wider text-[#9CB080]">Milestones</span>
             <h2 className="text-2xl font-bold text-white mt-1">Education & Experience</h2>
           </div>
           <Timeline items={educationAndTimeline} />
@@ -169,12 +184,44 @@ const About = (props) => {
         {/* Skills Matrix on the Right */}
         <div className="lg:col-span-5">
           <div className="mb-6">
-            <span className="text-xs font-semibold uppercase tracking-wider text-indigo-400">Proficiency</span>
+            <span className="text-xs font-semibold uppercase tracking-wider text-[#9CB080]">Proficiency</span>
             <h2 className="text-2xl font-bold text-white mt-1">Technical Skills</h2>
           </div>
           <SkillsMatrix skills={skillsData} />
         </div>
       </div>
+
+      {/* Licenses & Certifications Section */}
+      <section id="certificates" className="mt-16 pt-12 border-t border-[#2B5748] scroll-mt-24">
+        <div className="flex flex-col sm:flex-row sm:items-end justify-between mb-10 gap-4">
+          <div>
+            <span className="text-xs font-semibold uppercase tracking-wider text-[#9CB080]">Accreditations</span>
+            <h2 className="text-3xl font-extrabold text-white mt-1">Licenses & Certifications</h2>
+            <p className="text-[#CBD5C0] text-sm mt-1">
+              Verified certifications in modern web architecture, JavaScript algorithms, and full-stack development
+            </p>
+          </div>
+          <span className="text-xs text-[#CBD5C0] bg-[#273338] px-3.5 py-1.5 rounded-xl border border-[#2B5748] self-start sm:self-auto font-medium">
+            {certificatesData.length} Verified Credentials
+          </span>
+        </div>
+
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+          {certificatesData.map((cert) => (
+            <CertificateCard
+              key={cert.id}
+              certificate={cert}
+              onSelectCertificate={setSelectedCertificate}
+            />
+          ))}
+        </div>
+      </section>
+
+      {/* Certificate Modal Preview */}
+      <CertificateModal
+        certificate={selectedCertificate}
+        onClose={() => setSelectedCertificate(null)}
+      />
     </div>
   );
 };

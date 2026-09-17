@@ -152,3 +152,84 @@ export const educationAndTimeline = [
     type: "milestone"
   }
 ];
+
+export const certificatesData = [
+  {
+    id: "cert-1",
+    title: "Meta Front-End Developer Specialization",
+    issuer: "Meta / Coursera",
+    issuerLogo: "meta",
+    issueDate: "2024",
+    credentialId: "META-FE-984210",
+    verifyUrl: "https://www.coursera.org",
+    image: "https://images.unsplash.com/photo-1517694712202-14dd9538aa97?auto=format&fit=crop&w=800&q=80",
+    skills: ["React", "JavaScript", "HTML5", "Tailwind CSS"],
+    description: "Comprehensive 9-course specialization covering modern React architecture, UI/UX principles, version control, and interactive front-end development.",
+    featured: true
+  },
+  {
+    id: "cert-2",
+    title: "Front End Development Libraries",
+    issuer: "freeCodeCamp",
+    issuerLogo: "fcc",
+    issueDate: "2024",
+    credentialId: "FCC-FEDL-78391",
+    verifyUrl: "https://www.freecodecamp.org",
+    image: "https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fit=crop&w=800&q=80",
+    skills: ["React", "Tailwind CSS", "JavaScript", "Vite"],
+    description: "Mastery of modern component state, lifecycle hooks, Redux architecture, and reactive web applications verified through 5 core production projects.",
+    featured: true
+  },
+  {
+    id: "cert-3",
+    title: "JavaScript Algorithms & Data Structures",
+    issuer: "freeCodeCamp",
+    issuerLogo: "fcc",
+    issueDate: "2023",
+    credentialId: "FCC-JS-49201",
+    verifyUrl: "https://www.freecodecamp.org",
+    image: "https://images.unsplash.com/photo-1555066931-4365d14bab8c?auto=format&fit=crop&w=800&q=80",
+    skills: ["JavaScript", "Node.js", "REST APIs"],
+    description: "In-depth validation of ES6+ syntax, algorithmic problem solving, object-oriented programming, and functional programming methodologies.",
+    featured: true
+  },
+  {
+    id: "cert-4",
+    title: "Responsive Web Design Certification",
+    issuer: "freeCodeCamp",
+    issuerLogo: "fcc",
+    issueDate: "2023",
+    credentialId: "FCC-RWD-31092",
+    verifyUrl: "https://www.freecodecamp.org",
+    image: "https://images.unsplash.com/photo-1507238691740-187a5b1d37b8?auto=format&fit=crop&w=800&q=80",
+    skills: ["HTML5", "Tailwind CSS", "Figma"],
+    description: "Semantic HTML5, CSS Grid, Flexbox, media queries, and responsive web design patterns across mobile, tablet, and desktop viewports.",
+    featured: false
+  },
+  {
+    id: "cert-5",
+    title: "Back End Development and APIs",
+    issuer: "freeCodeCamp",
+    issuerLogo: "fcc",
+    issueDate: "2024",
+    credentialId: "FCC-BEA-66103",
+    verifyUrl: "https://www.freecodecamp.org",
+    image: "https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?auto=format&fit=crop&w=800&q=80",
+    skills: ["Node.js", "MongoDB", "Express", "REST APIs"],
+    description: "Hands-on microservice development, Express server architecture, MongoDB schema modeling, and RESTful API engineering with robust error handling.",
+    featured: false
+  },
+  {
+    id: "cert-6",
+    title: "Git & GitHub Version Control Masterclass",
+    issuer: "Udemy / Global Tech",
+    issuerLogo: "git",
+    issueDate: "2023",
+    credentialId: "UC-GIT-18302",
+    verifyUrl: "https://www.udemy.com",
+    image: "https://images.unsplash.com/photo-1618401471353-b98afee0b2eb?auto=format&fit=crop&w=800&q=80",
+    skills: ["Git", "GitHub"],
+    description: "Collaborative Git branching strategies, rebasing, pull requests, merge conflict resolutions, and automated CI/CD workflows.",
+    featured: false
+  }
+];
