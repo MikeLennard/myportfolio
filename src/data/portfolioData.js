@@ -4,7 +4,7 @@ export const personalInfo = {
   tagline: "Crafting scalable web applications and intuitive digital experiences with modern React.",
   bio: "I am a passionate developer focused on building clean, high-performance web applications. I specialize in the modern JavaScript ecosystem, React architecture, and responsive user interfaces that delight users.",
   location: "Metro Manila, Philippines",
-  email: "mikelennard.dev@gmail.com",
+  email: "lennarddelacruz27@gmail.com",
   phone: "+63 (912) 345-6789",
   avatar: "/profile.jpg",
   availableForHire: true,
