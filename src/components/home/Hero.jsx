@@ -95,45 +95,13 @@ export default function Hero() {
 
             {/* Main Portrait Card Container */}
             <div className="relative glass-panel rounded-3xl overflow-hidden border border-slate-700/80 shadow-2xl animate-float">
-              {/* Image Frame */}
-              <div className="relative h-[430px] w-full overflow-hidden bg-slate-900">
+              {/* Image Frame - Clean Photo Display */}
+              <div className="relative h-[460px] w-full overflow-hidden bg-slate-900">
                 <img
                   src={personalInfo.avatar}
                   alt={personalInfo.name}
-                  className="w-full h-full object-cover object-top transition-transform duration-700 group-hover:scale-105"
+                  className="w-full h-full object-cover object-center transition-transform duration-700 group-hover:scale-105"
                 />
-
-                {/* Gradient Overlays */}
-                <div className="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/25 to-transparent"></div>
-                <div className="absolute inset-0 bg-gradient-to-b from-slate-950/40 via-transparent to-transparent"></div>
-
-                {/* Floating Top Status Badge */}
-                <div className="absolute top-4 left-4 right-4 flex items-center justify-between">
-                  <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-slate-950/80 backdrop-blur-md border border-slate-700/60 text-xs font-semibold text-slate-200">
-                    <span className="w-2 h-2 rounded-full bg-emerald-400 pulse-dot"></span>
-                    <span>Online & Coding</span>
-                  </div>
-                  <div className="px-3 py-1 rounded-full bg-indigo-950/80 backdrop-blur-md border border-indigo-500/40 text-[11px] font-mono text-indigo-300">
-                    React 19
-                  </div>
-                </div>
-
-                {/* Floating Bottom Card Details */}
-                <div className="absolute bottom-4 left-4 right-4 p-4 rounded-2xl bg-slate-950/85 backdrop-blur-md border border-slate-800 space-y-2">
-                  <div className="flex items-center justify-between">
-                    <div>
-                      <h3 className="text-lg font-bold text-white tracking-wide">{personalInfo.name}</h3>
-                      <p className="text-xs text-indigo-400 font-medium">Software Engineer & UI Developer</p>
-                    </div>
-                    <div className="w-8 h-8 rounded-lg bg-indigo-600/20 border border-indigo-500/40 flex items-center justify-center text-indigo-300 text-sm font-bold">
-                      ML
-                    </div>
-                  </div>
-                  <div className="flex items-center justify-between pt-2 border-t border-slate-800/80 text-[11px] text-slate-400">
-                    <span>📍 {personalInfo.location}</span>
-                    <span className="text-emerald-400 font-semibold">Available for Work</span>
-                  </div>
-                </div>
               </div>
             </div>
           </div>
