@@ -1,6 +1,5 @@
 import { Link } from 'react-router-dom';
 import { personalInfo } from '../../data/portfolioData';
-import Badge from '../common/Badge';
 
 /**
  * Hero Component
@@ -46,44 +45,17 @@ export default function Hero() {
               <span>→</span>
             </Link>
 
-            <Link
-              to="/contact"
-              className="px-6 py-3 rounded-xl bg-[#273338]/90 hover:bg-[#2B5748] text-[#f1f5f0] hover:text-white font-semibold text-sm border border-[#2B5748] transition-colors"
-            >
-              Get In Touch
-            </Link>
-
-            <a
-              href={personalInfo.socialLinks.linkedin}
-              target="_blank"
-              rel="noreferrer"
-              className="px-4 py-3 rounded-xl bg-[#2B5748]/70 hover:bg-[#618764] text-[#9CB080] hover:text-white font-semibold text-sm border border-[#9CB080]/40 transition-all flex items-center gap-1.5 shadow-md shadow-[#2B5748]/30"
-            >
-              <span>💼</span>
-              <span>LinkedIn</span>
-            </a>
-
             <a
               href="#resume"
               onClick={(e) => {
                 e.preventDefault();
                 alert(`Resume download simulation: Profile for ${personalInfo.name} loaded successfully!`);
               }}
-              className="px-4 py-3 rounded-xl text-[#9CB080] hover:text-white text-sm font-medium flex items-center gap-1.5 transition-colors cursor-pointer"
+              className="px-5 py-3 rounded-xl bg-[#273338]/90 hover:bg-[#2B5748] text-[#9CB080] hover:text-white text-sm font-semibold border border-[#2B5748] flex items-center gap-2 transition-all cursor-pointer shadow-md"
             >
               <span>📄</span>
               <span>Download CV</span>
             </a>
-          </div>
-
-          {/* Quick Tech Highlights */}
-          <div className="pt-4 flex items-center justify-center lg:justify-start gap-3 text-xs text-slate-300">
-            <span className="font-semibold text-[#9CB080]">Core Stack:</span>
-            <div className="flex flex-wrap gap-1.5">
-              {["React 19", "JavaScript (ES6+)", "Tailwind CSS", "Node.js", "Vite"].map((tech) => (
-                <Badge key={tech} text={tech} variant="primary" size="sm" />
-              ))}
-            </div>
           </div>
         </div>
 

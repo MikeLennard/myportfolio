@@ -1,6 +1,6 @@
 export const personalInfo = {
   name: "Mike Lennard Dela Cruz",
-  title: "Full-Stack Web Developer & UI/UX Enthusiast",
+  title: "Full-Stack Web Developer",
   tagline: "Crafting scalable web applications and intuitive digital experiences with modern React.",
   bio: "I am a passionate developer focused on building clean, high-performance web applications. I specialize in the modern JavaScript ecosystem, React architecture, and responsive user interfaces that delight users.",
   location: "Metro Manila, Philippines",

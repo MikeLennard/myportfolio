@@ -40,7 +40,6 @@ const NavContainer = ({ items = [] }) => {
                 Mike Lennard Dela Cruz
                 <span className="w-2 h-2 rounded-full bg-[#9CB080] inline-block pulse-dot" title="Available for projects"></span>
               </span>
-              <span className="text-xs text-[#9CB080] font-mono">Portfolio.jsx</span>
             </div>
           </Link>
 
