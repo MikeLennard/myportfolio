@@ -8,7 +8,7 @@ import Badge from '../common/Badge';
  * - Functional Component
  * - Props / Data Integration
  * - Event Handling (`onClick`)
- * - Rich Custom CSS Animations & Glassmorphism
+ * - Circular Profile Picture with User Custom Palette (#9CB080, #618764, #2B5748, #273338)
  */
 export default function Hero() {
   return (
@@ -17,8 +17,8 @@ export default function Hero() {
         {/* Left Column: Introductions & CTAs */}
         <div className="lg:col-span-7 space-y-6 text-center lg:text-left">
           {/* Status Badge */}
-          <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-indigo-950/70 border border-indigo-500/40 text-xs font-semibold text-indigo-300 backdrop-blur-md">
-            <span className="w-2 h-2 rounded-full bg-emerald-400 pulse-dot"></span>
+          <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[#2B5748]/70 border border-[#9CB080]/40 text-xs font-semibold text-[#9CB080] backdrop-blur-md">
+            <span className="w-2 h-2 rounded-full bg-[#9CB080] pulse-dot"></span>
             <span>Available for New Projects & Internships</span>
           </div>
 
@@ -26,13 +26,13 @@ export default function Hero() {
           <h1 className="text-4xl sm:text-6xl font-extrabold text-white tracking-tight leading-[1.15]">
             Hi, I'm <span className="gradient-text">{personalInfo.name}</span>
             <br />
-            <span className="text-2xl sm:text-4xl text-slate-300 font-bold block mt-2">
+            <span className="text-2xl sm:text-4xl text-[#9CB080] font-bold block mt-2">
               {personalInfo.title}
             </span>
           </h1>
 
           {/* Subtitle */}
-          <p className="text-slate-400 text-base sm:text-lg max-w-2xl leading-relaxed">
+          <p className="text-[#CBD5C0] text-base sm:text-lg max-w-2xl leading-relaxed">
             {personalInfo.tagline} {personalInfo.bio}
           </p>
 
@@ -40,7 +40,7 @@ export default function Hero() {
           <div className="flex flex-wrap items-center justify-center lg:justify-start gap-4 pt-2">
             <Link
               to="/projects"
-              className="btn-glow px-6 py-3 rounded-xl bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-500 hover:to-indigo-500 text-white font-semibold text-sm shadow-xl shadow-indigo-500/25 flex items-center gap-2"
+              className="btn-glow px-6 py-3 rounded-xl text-white font-semibold text-sm shadow-xl flex items-center gap-2"
             >
               <span>Explore Projects</span>
               <span>→</span>
@@ -48,7 +48,7 @@ export default function Hero() {
 
             <Link
               to="/contact"
-              className="px-6 py-3 rounded-xl bg-slate-900/80 hover:bg-slate-800 text-slate-200 hover:text-white font-semibold text-sm border border-slate-700 transition-colors"
+              className="px-6 py-3 rounded-xl bg-[#273338]/90 hover:bg-[#2B5748] text-[#f1f5f0] hover:text-white font-semibold text-sm border border-[#2B5748] transition-colors"
             >
               Get In Touch
             </Link>
@@ -57,7 +57,7 @@ export default function Hero() {
               href={personalInfo.socialLinks.linkedin}
               target="_blank"
               rel="noreferrer"
-              className="px-4 py-3 rounded-xl bg-blue-950/60 hover:bg-blue-900/70 text-blue-300 hover:text-white font-semibold text-sm border border-blue-700/60 transition-all flex items-center gap-1.5 shadow-md shadow-blue-900/20"
+              className="px-4 py-3 rounded-xl bg-[#2B5748]/70 hover:bg-[#618764] text-[#9CB080] hover:text-white font-semibold text-sm border border-[#9CB080]/40 transition-all flex items-center gap-1.5 shadow-md shadow-[#2B5748]/30"
             >
               <span>💼</span>
               <span>LinkedIn</span>
@@ -69,7 +69,7 @@ export default function Hero() {
                 e.preventDefault();
                 alert(`Resume download simulation: Profile for ${personalInfo.name} loaded successfully!`);
               }}
-              className="px-4 py-3 rounded-xl text-slate-400 hover:text-indigo-400 text-sm font-medium flex items-center gap-1.5 transition-colors cursor-pointer"
+              className="px-4 py-3 rounded-xl text-[#9CB080] hover:text-white text-sm font-medium flex items-center gap-1.5 transition-colors cursor-pointer"
             >
               <span>📄</span>
               <span>Download CV</span>
@@ -77,26 +77,26 @@ export default function Hero() {
           </div>
 
           {/* Quick Tech Highlights */}
-          <div className="pt-4 flex items-center justify-center lg:justify-start gap-3 text-xs text-slate-400">
-            <span className="font-semibold text-slate-400">Core Stack:</span>
+          <div className="pt-4 flex items-center justify-center lg:justify-start gap-3 text-xs text-slate-300">
+            <span className="font-semibold text-[#9CB080]">Core Stack:</span>
             <div className="flex flex-wrap gap-1.5">
               {["React 19", "JavaScript (ES6+)", "Tailwind CSS", "Node.js", "Vite"].map((tech) => (
-                <Badge key={tech} text={tech} variant="default" size="sm" />
+                <Badge key={tech} text={tech} variant="primary" size="sm" />
               ))}
             </div>
           </div>
         </div>
 
-        {/* Right Column: Portrait Photo Showcase Card */}
-        <div className="lg:col-span-5 flex justify-center">
-          <div className="relative w-full max-w-sm sm:max-w-md group">
-            {/* Ambient Background Glow */}
-            <div className="absolute -inset-1 bg-gradient-to-r from-blue-600 via-indigo-600 to-purple-600 rounded-3xl blur-xl opacity-35 group-hover:opacity-55 transition duration-500"></div>
+        {/* Right Column: Circular Profile Picture with Custom Palette Glowing Ring */}
+        <div className="lg:col-span-5 flex justify-center items-center">
+          <div className="relative group">
+            {/* Ambient Background Glow with #618764 and #9CB080 */}
+            <div className="absolute -inset-4 bg-gradient-to-r from-[#2B5748] via-[#618764] to-[#9CB080] rounded-full blur-2xl opacity-50 group-hover:opacity-75 transition duration-700"></div>
 
-            {/* Main Portrait Card Container */}
-            <div className="relative glass-panel rounded-3xl overflow-hidden border border-slate-700/80 shadow-2xl animate-float">
-              {/* Image Frame - Clean Photo Display */}
-              <div className="relative h-[460px] w-full overflow-hidden bg-slate-900">
+            {/* Glowing Gradient Ring Border */}
+            <div className="relative p-2 rounded-full bg-gradient-to-tr from-[#2B5748] via-[#618764] to-[#9CB080] shadow-2xl shadow-[#2B5748]/40 animate-float">
+              {/* Circular Inner Frame */}
+              <div className="w-64 h-64 sm:w-80 sm:h-80 rounded-full overflow-hidden border-4 border-[#273338] bg-[#273338] shadow-inner">
                 <img
                   src={personalInfo.avatar}
                   alt={personalInfo.name}

@@ -66,53 +66,53 @@ const About = (props) => {
           </p>
 
           <div className="pt-2 flex flex-wrap gap-3">
-            <div className="bg-slate-900/90 border border-slate-800 px-4 py-2 rounded-xl text-xs">
-              <span className="text-slate-400">Location:</span>{' '}
+            <div className="bg-[#273338] border border-[#2B5748] px-4 py-2 rounded-xl text-xs">
+              <span className="text-[#CBD5C0]">Location:</span>{' '}
               <span className="text-white font-medium">{personalInfo.location}</span>
             </div>
-            <div className="bg-slate-900/90 border border-slate-800 px-4 py-2 rounded-xl text-xs">
-              <span className="text-slate-400">Status:</span>{' '}
-              <span className="text-emerald-400 font-medium">Available for hire</span>
+            <div className="bg-[#273338] border border-[#2B5748] px-4 py-2 rounded-xl text-xs">
+              <span className="text-[#CBD5C0]">Status:</span>{' '}
+              <span className="text-[#9CB080] font-medium">Available for hire</span>
             </div>
-            <div className="bg-slate-900/90 border border-slate-800 px-4 py-2 rounded-xl text-xs">
-              <span className="text-slate-400">Primary Focus:</span>{' '}
-              <span className="text-indigo-300 font-medium">React & Full-Stack</span>
+            <div className="bg-[#273338] border border-[#2B5748] px-4 py-2 rounded-xl text-xs">
+              <span className="text-[#CBD5C0]">Primary Focus:</span>{' '}
+              <span className="text-[#9CB080] font-medium">React & Full-Stack</span>
             </div>
           </div>
         </div>
 
         {/* Quick Highlights / Image Placeholder Box */}
         <div className="lg:col-span-5 flex flex-col gap-4">
-          <div className="glass-panel p-6 rounded-3xl border border-indigo-500/30 glow-border">
+          <div className="glass-panel p-6 rounded-3xl border border-[#9CB080]/30 glow-border">
             <h3 className="text-lg font-bold text-white mb-2">Key Highlights</h3>
-            <ul className="space-y-3 text-sm text-slate-300">
+            <ul className="space-y-3 text-sm text-[#f1f5f0]">
               <li className="flex items-center gap-2">
-                <span className="text-indigo-400 font-bold">✓</span>
+                <span className="text-[#9CB080] font-bold">✓</span>
                 Proficient in Modern React 19, Hooks, & Vite
               </li>
               <li className="flex items-center gap-2">
-                <span className="text-indigo-400 font-bold">✓</span>
+                <span className="text-[#9CB080] font-bold">✓</span>
                 Strong understanding of state management & lifecycle
               </li>
               <li className="flex items-center gap-2">
-                <span className="text-indigo-400 font-bold">✓</span>
+                <span className="text-[#9CB080] font-bold">✓</span>
                 Clean CSS design systems (Tailwind + Custom CSS)
               </li>
               <li className="flex items-center gap-2">
-                <span className="text-indigo-400 font-bold">✓</span>
+                <span className="text-[#9CB080] font-bold">✓</span>
                 REST API design, database schemas & integration
               </li>
             </ul>
           </div>
 
-          <div className="glass-panel p-6 rounded-3xl bg-gradient-to-br from-indigo-950/40 to-slate-900/60">
-            <h4 className="text-sm font-semibold text-slate-200 mb-1">Looking for a collaborator?</h4>
-            <p className="text-xs text-slate-400 mb-3">
+          <div className="glass-panel p-6 rounded-3xl bg-gradient-to-br from-[#2B5748]/50 to-[#273338]">
+            <h4 className="text-sm font-semibold text-[#f1f5f0] mb-1">Looking for a collaborator?</h4>
+            <p className="text-xs text-[#CBD5C0] mb-3">
               Feel free to reach out for project inquiries, tech discussions, or freelance gigs.
             </p>
             <a
               href={`mailto:${personalInfo.email}`}
-              className="inline-block text-xs font-bold text-indigo-300 hover:text-white transition-colors"
+              className="inline-block text-xs font-bold text-[#9CB080] hover:text-white transition-colors"
             >
               {personalInfo.email} →
             </a>

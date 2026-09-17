@@ -3,26 +3,23 @@ import ProjectCard from '../projects/ProjectCard';
 
 /**
  * FeaturedProjects Component
- * Demonstrates:
- * - Functional Component
- * - Props (`projects`, `onSelectProject`)
- * - Event delegation
+ * Styled with custom palette (#9CB080, #618764, #2B5748, #273338)
  */
 export default function FeaturedProjects({ projects = [], onSelectProject }) {
   const featured = projects.filter((p) => p.featured).slice(0, 3);
 
   return (
-    <section className="py-12 border-t border-slate-800/80">
+    <section className="py-12 border-t border-[#2B5748]">
       <div className="flex flex-col md:flex-row md:items-end justify-between mb-10 gap-4">
         <div>
-          <span className="text-xs font-semibold uppercase tracking-wider text-indigo-400">Highlights</span>
+          <span className="text-xs font-semibold uppercase tracking-wider text-[#9CB080]">Highlights</span>
           <h2 className="text-3xl font-extrabold text-white mt-1">Featured Works</h2>
-          <p className="text-sm text-slate-400 mt-1">Selected builds demonstrating architecture, scalability, and UX design</p>
+          <p className="text-sm text-[#CBD5C0] mt-1">Selected builds demonstrating architecture, scalability, and UX design</p>
         </div>
 
         <Link
           to="/projects"
-          className="inline-flex items-center gap-1.5 text-sm font-semibold text-indigo-400 hover:text-indigo-300 transition-colors"
+          className="inline-flex items-center gap-1.5 text-sm font-semibold text-[#9CB080] hover:text-white transition-colors"
         >
           <span>View All Projects</span>
           <span>→</span>

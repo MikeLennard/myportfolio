@@ -3,12 +3,7 @@ import Badge from '../common/Badge';
 
 /**
  * Timeline Component
- * Demonstrates:
- * - Functional Component
- * - Props (`items`)
- * - State (`filter`)
- * - Event Handling (`onClick`)
- * - Custom CSS timeline line styling
+ * Styled with user palette (#9CB080, #618764, #2B5748, #273338)
  */
 export default function Timeline({ items = [] }) {
   const [filter, setFilter] = useState('all');
@@ -29,8 +24,8 @@ export default function Timeline({ items = [] }) {
             onClick={() => setFilter(type)}
             className={`px-3.5 py-1.5 rounded-xl text-xs font-semibold uppercase tracking-wider transition-colors cursor-pointer ${
               filter === type
-                ? 'bg-indigo-600 text-white shadow-md shadow-indigo-500/20'
-                : 'bg-slate-900 text-slate-400 hover:text-white border border-slate-800'
+                ? 'bg-[#2B5748] text-[#9CB080] border border-[#9CB080]/40 shadow-md'
+                : 'bg-[#273338] text-[#CBD5C0] hover:text-white border border-[#2B5748]'
             }`}
           >
             {type}
@@ -39,15 +34,15 @@ export default function Timeline({ items = [] }) {
       </div>
 
       {/* Timeline items list */}
-      <div className="relative pl-6 border-l-2 border-indigo-600/40 space-y-8 my-4">
+      <div className="relative pl-6 border-l-2 border-[#618764]/40 space-y-8 my-4">
         {filteredItems.map((item) => (
           <div key={item.id} className="relative group">
             {/* Timeline node dot */}
-            <div className="absolute -left-[31px] top-1.5 w-4 h-4 rounded-full bg-indigo-600 border-4 border-slate-950 group-hover:scale-125 transition-transform"></div>
+            <div className="absolute -left-[31px] top-1.5 w-4 h-4 rounded-full bg-[#9CB080] border-4 border-[#273338] group-hover:scale-125 transition-transform"></div>
 
-            <div className="glass-panel p-5 rounded-2xl">
+            <div className="glass-panel p-5 rounded-2xl hover:border-[#9CB080]/50">
               <div className="flex flex-wrap items-center justify-between gap-2 mb-2">
-                <span className="text-xs font-mono font-bold text-indigo-400 bg-indigo-950/80 px-2.5 py-0.5 rounded-md border border-indigo-800/40">
+                <span className="text-xs font-mono font-bold text-[#9CB080] bg-[#2B5748] px-2.5 py-0.5 rounded-md border border-[#618764]/40">
                   {item.year}
                 </span>
                 <Badge
@@ -57,11 +52,11 @@ export default function Timeline({ items = [] }) {
                 />
               </div>
 
-              <h4 className="text-lg font-bold text-white group-hover:text-indigo-300 transition-colors">
+              <h4 className="text-lg font-bold text-white group-hover:text-[#9CB080] transition-colors">
                 {item.role}
               </h4>
-              <p className="text-xs font-medium text-slate-400 mb-2">{item.institution}</p>
-              <p className="text-sm text-slate-300 leading-relaxed">{item.description}</p>
+              <p className="text-xs font-medium text-[#CBD5C0] mb-2">{item.institution}</p>
+              <p className="text-sm text-[#f1f5f0] leading-relaxed">{item.description}</p>
             </div>
           </div>
         ))}

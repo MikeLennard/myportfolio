@@ -1,14 +1,14 @@
 /**
  * Badge Component
- * Demonstrates functional component with props
+ * Demonstrates functional component with props and user color palette
  */
 export default function Badge({ text, variant = 'default', size = 'md' }) {
   const variantStyles = {
-    default: 'bg-slate-800/80 text-slate-300 border-slate-700/60',
-    primary: 'bg-indigo-950/60 text-indigo-300 border-indigo-800/50',
-    success: 'bg-emerald-950/60 text-emerald-300 border-emerald-800/50',
-    warning: 'bg-amber-950/60 text-amber-300 border-amber-800/50',
-    accent: 'bg-purple-950/60 text-purple-300 border-purple-800/50',
+    default: 'bg-[#273338]/90 text-slate-300 border-[#2B5748]',
+    primary: 'bg-[#2B5748]/70 text-[#9CB080] border-[#618764]/50',
+    success: 'bg-[#2B5748]/90 text-[#9CB080] border-[#618764]',
+    warning: 'bg-amber-950/60 text-amber-200 border-amber-800/50',
+    accent: 'bg-[#2B5748]/80 text-[#9CB080] border-[#9CB080]/40',
   };
 
   const sizeStyles = {

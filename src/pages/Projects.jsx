@@ -85,7 +85,7 @@ export default function Projects() {
               setActiveCategory('All');
               setSearchQuery('');
             }}
-            className="px-4 py-2 text-xs font-semibold text-white bg-indigo-600 rounded-xl hover:bg-indigo-500 transition-colors cursor-pointer"
+            className="px-4 py-2 text-xs font-semibold text-white bg-gradient-to-r from-[#618764] to-[#2B5748] hover:from-[#9CB080] hover:to-[#618764] rounded-xl transition-colors cursor-pointer shadow-md"
           >
             Reset Filters
           </button>

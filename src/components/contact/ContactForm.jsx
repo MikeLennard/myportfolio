@@ -3,12 +3,7 @@ import Button from '../common/Button';
 
 /**
  * ContactForm Component
- * Demonstrates:
- * - Functional Component
- * - Controlled Form State (inputs, textarea)
- * - Validation State & Error Messages
- * - Event Handling (onChange, onBlur, onSubmit with preventDefault)
- * - Submission Feedback (loading, success banner)
+ * Styled with custom palette (#9CB080, #618764, #2B5748, #273338)
  */
 export default function ContactForm() {
   const [formData, setFormData] = useState({
@@ -87,12 +82,12 @@ export default function ContactForm() {
 
   if (isSubmitted) {
     return (
-      <div className="glass-panel p-8 rounded-3xl text-center space-y-4 animate-fadeIn border-emerald-500/30">
-        <div className="w-16 h-16 mx-auto rounded-2xl bg-emerald-950/80 border border-emerald-500/40 text-emerald-400 flex items-center justify-center text-3xl">
+      <div className="glass-panel p-8 rounded-3xl text-center space-y-4 animate-fadeIn border-[#9CB080]/40">
+        <div className="w-16 h-16 mx-auto rounded-2xl bg-[#2B5748]/80 border border-[#9CB080]/50 text-[#9CB080] flex items-center justify-center text-3xl">
           ✓
         </div>
         <h3 className="text-2xl font-bold text-white">Message Sent Successfully!</h3>
-        <p className="text-slate-300 text-sm max-w-md mx-auto">
+        <p className="text-[#CBD5C0] text-sm max-w-md mx-auto">
           Thank you for getting in touch. Your message has been recorded and I will respond to your email as soon as possible.
         </p>
         <div className="pt-4">
@@ -105,16 +100,16 @@ export default function ContactForm() {
   }
 
   return (
-    <div className="glass-panel p-6 sm:p-8 rounded-3xl">
+    <div className="glass-panel p-6 sm:p-8 rounded-3xl hover:border-[#9CB080]/50">
       <h3 className="text-xl font-bold text-white mb-2">Send a Message</h3>
-      <p className="text-slate-400 text-sm mb-6">
+      <p className="text-[#CBD5C0] text-sm mb-6">
         Have a question, collaboration idea, or project proposition? Fill out the form below.
       </p>
 
       <form onSubmit={handleSubmit} className="space-y-4" noValidate>
         {/* Name Field */}
         <div>
-          <label htmlFor="name" className="block text-xs font-semibold uppercase tracking-wider text-slate-300 mb-1">
+          <label htmlFor="name" className="block text-xs font-semibold uppercase tracking-wider text-[#CBD5C0] mb-1">
             Your Name <span className="text-rose-400">*</span>
           </label>
           <input
@@ -125,8 +120,8 @@ export default function ContactForm() {
             onChange={handleChange}
             onBlur={handleBlur}
             placeholder="John Doe"
-            className={`w-full px-4 py-3 bg-slate-900/90 border rounded-xl text-sm text-slate-100 placeholder-slate-500 focus:outline-none transition-colors ${
-              errors.name ? 'border-rose-500 focus:border-rose-500' : 'border-slate-800 focus:border-indigo-500'
+            className={`w-full px-4 py-3 bg-[#273338] border rounded-xl text-sm text-[#f1f5f0] placeholder-[#CBD5C0]/50 focus:outline-none transition-colors ${
+              errors.name ? 'border-rose-500 focus:border-rose-500' : 'border-[#2B5748] focus:border-[#9CB080]'
             }`}
           />
           {errors.name && <p className="text-rose-400 text-xs mt-1">{errors.name}</p>}
@@ -134,7 +129,7 @@ export default function ContactForm() {
 
         {/* Email Field */}
         <div>
-          <label htmlFor="email" className="block text-xs font-semibold uppercase tracking-wider text-slate-300 mb-1">
+          <label htmlFor="email" className="block text-xs font-semibold uppercase tracking-wider text-[#CBD5C0] mb-1">
             Your Email <span className="text-rose-400">*</span>
           </label>
           <input
@@ -145,8 +140,8 @@ export default function ContactForm() {
             onChange={handleChange}
             onBlur={handleBlur}
             placeholder="johndoe@example.com"
-            className={`w-full px-4 py-3 bg-slate-900/90 border rounded-xl text-sm text-slate-100 placeholder-slate-500 focus:outline-none transition-colors ${
-              errors.email ? 'border-rose-500 focus:border-rose-500' : 'border-slate-800 focus:border-indigo-500'
+            className={`w-full px-4 py-3 bg-[#273338] border rounded-xl text-sm text-[#f1f5f0] placeholder-[#CBD5C0]/50 focus:outline-none transition-colors ${
+              errors.email ? 'border-rose-500 focus:border-rose-500' : 'border-[#2B5748] focus:border-[#9CB080]'
             }`}
           />
           {errors.email && <p className="text-rose-400 text-xs mt-1">{errors.email}</p>}
@@ -154,7 +149,7 @@ export default function ContactForm() {
 
         {/* Subject Field */}
         <div>
-          <label htmlFor="subject" className="block text-xs font-semibold uppercase tracking-wider text-slate-300 mb-1">
+          <label htmlFor="subject" className="block text-xs font-semibold uppercase tracking-wider text-[#CBD5C0] mb-1">
             Subject <span className="text-rose-400">*</span>
           </label>
           <input
@@ -165,8 +160,8 @@ export default function ContactForm() {
             onChange={handleChange}
             onBlur={handleBlur}
             placeholder="Project Collaboration / Inquiries"
-            className={`w-full px-4 py-3 bg-slate-900/90 border rounded-xl text-sm text-slate-100 placeholder-slate-500 focus:outline-none transition-colors ${
-              errors.subject ? 'border-rose-500 focus:border-rose-500' : 'border-slate-800 focus:border-indigo-500'
+            className={`w-full px-4 py-3 bg-[#273338] border rounded-xl text-sm text-[#f1f5f0] placeholder-[#CBD5C0]/50 focus:outline-none transition-colors ${
+              errors.subject ? 'border-rose-500 focus:border-rose-500' : 'border-[#2B5748] focus:border-[#9CB080]'
             }`}
           />
           {errors.subject && <p className="text-rose-400 text-xs mt-1">{errors.subject}</p>}
@@ -174,7 +169,7 @@ export default function ContactForm() {
 
         {/* Message Field */}
         <div>
-          <label htmlFor="message" className="block text-xs font-semibold uppercase tracking-wider text-slate-300 mb-1">
+          <label htmlFor="message" className="block text-xs font-semibold uppercase tracking-wider text-[#CBD5C0] mb-1">
             Message <span className="text-rose-400">*</span>
           </label>
           <textarea
@@ -185,8 +180,8 @@ export default function ContactForm() {
             onChange={handleChange}
             onBlur={handleBlur}
             placeholder="Describe your project, timeline, or question here..."
-            className={`w-full px-4 py-3 bg-slate-900/90 border rounded-xl text-sm text-slate-100 placeholder-slate-500 focus:outline-none transition-colors resize-none ${
-              errors.message ? 'border-rose-500 focus:border-rose-500' : 'border-slate-800 focus:border-indigo-500'
+            className={`w-full px-4 py-3 bg-[#273338] border rounded-xl text-sm text-[#f1f5f0] placeholder-[#CBD5C0]/50 focus:outline-none transition-colors resize-none ${
+              errors.message ? 'border-rose-500 focus:border-rose-500' : 'border-[#2B5748] focus:border-[#9CB080]'
             }`}
           ></textarea>
           {errors.message && <p className="text-rose-400 text-xs mt-1">{errors.message}</p>}
