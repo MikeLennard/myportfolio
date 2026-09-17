@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import TechIcon from '../common/TechIcon';
 
 /**
  * SkillsMatrix Component
@@ -45,7 +46,9 @@ export default function SkillsMatrix({ skills }) {
           <div key={idx} className="space-y-1.5">
             <div className="flex items-center justify-between text-xs font-semibold">
               <span className="flex items-center gap-2 text-[#f1f5f0]">
-                <span>{skill.icon}</span>
+                <span className="w-5 h-5 flex items-center justify-center">
+                  <TechIcon name={skill.name} className="w-4 h-4" />
+                </span>
                 <span>{skill.name}</span>
               </span>
               <span className="font-mono text-[#9CB080]">{skill.level}%</span>

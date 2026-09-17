@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import Badge from '../common/Badge';
+import TechIcon from '../common/TechIcon';
 
 /**
  * QuickSkills Component
@@ -53,8 +54,8 @@ export default function QuickSkills({ skills }) {
             className="glass-panel p-4 rounded-xl flex items-center justify-between group hover:border-[#9CB080]/50 transition-all"
           >
             <div className="flex items-center gap-3">
-              <span className="text-xl p-2 rounded-lg bg-[#2B5748]/60 group-hover:scale-110 transition-transform">
-                {skill.icon}
+              <span className="p-2.5 rounded-xl bg-[#2B5748]/60 border border-[#618764]/30 group-hover:scale-110 group-hover:border-[#9CB080]/50 transition-all flex items-center justify-center">
+                <TechIcon name={skill.name} className="w-5 h-5" />
               </span>
               <span className="font-semibold text-slate-200 text-sm">{skill.name}</span>
             </div>

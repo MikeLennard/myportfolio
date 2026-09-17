@@ -74,7 +74,11 @@ export default function Projects() {
         </div>
       ) : (
         <div className="glass-panel text-center py-16 px-4 rounded-2xl">
-          <div className="text-4xl mb-3">🔍</div>
+          <div className="w-14 h-14 mx-auto mb-4 rounded-2xl bg-[#2B5748]/60 border border-[#618764]/40 flex items-center justify-center text-[#9CB080]">
+            <svg className="w-7 h-7" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2">
+              <path strokeLinecap="round" strokeLinejoin="round" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
+            </svg>
+          </div>
           <h3 className="text-lg font-bold text-white mb-1">No Projects Found</h3>
           <p className="text-slate-400 text-sm mb-4">
             No projects matched your search criteria "{searchQuery}" in category "{activeCategory}".

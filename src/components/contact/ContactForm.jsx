@@ -153,10 +153,9 @@ export default function ContactForm() {
             value={formData.name}
             onChange={handleChange}
             onBlur={handleBlur}
-            placeholder="John Doe"
-            className={`w-full px-4 py-3 bg-[#273338] border rounded-xl text-sm text-[#f1f5f0] placeholder-[#CBD5C0]/50 focus:outline-none transition-colors ${
-              errors.name ? 'border-rose-500 focus:border-rose-500' : 'border-[#2B5748] focus:border-[#9CB080]'
-            }`}
+            placeholder="Juan Dela Cruz"
+            className={`w-full px-4 py-3 bg-[#273338] border rounded-xl text-sm text-[#f1f5f0] placeholder-[#CBD5C0]/50 focus:outline-none transition-colors ${errors.name ? 'border-rose-500 focus:border-rose-500' : 'border-[#2B5748] focus:border-[#9CB080]'
+              }`}
           />
           {errors.name && <p className="text-rose-400 text-xs mt-1">{errors.name}</p>}
         </div>
@@ -173,10 +172,9 @@ export default function ContactForm() {
             value={formData.email}
             onChange={handleChange}
             onBlur={handleBlur}
-            placeholder="johndoe@example.com"
-            className={`w-full px-4 py-3 bg-[#273338] border rounded-xl text-sm text-[#f1f5f0] placeholder-[#CBD5C0]/50 focus:outline-none transition-colors ${
-              errors.email ? 'border-rose-500 focus:border-rose-500' : 'border-[#2B5748] focus:border-[#9CB080]'
-            }`}
+            placeholder="juandelacruz@example.com"
+            className={`w-full px-4 py-3 bg-[#273338] border rounded-xl text-sm text-[#f1f5f0] placeholder-[#CBD5C0]/50 focus:outline-none transition-colors ${errors.email ? 'border-rose-500 focus:border-rose-500' : 'border-[#2B5748] focus:border-[#9CB080]'
+              }`}
           />
           {errors.email && <p className="text-rose-400 text-xs mt-1">{errors.email}</p>}
         </div>
@@ -194,9 +192,8 @@ export default function ContactForm() {
             onChange={handleChange}
             onBlur={handleBlur}
             placeholder="Project Collaboration / Inquiries"
-            className={`w-full px-4 py-3 bg-[#273338] border rounded-xl text-sm text-[#f1f5f0] placeholder-[#CBD5C0]/50 focus:outline-none transition-colors ${
-              errors.subject ? 'border-rose-500 focus:border-rose-500' : 'border-[#2B5748] focus:border-[#9CB080]'
-            }`}
+            className={`w-full px-4 py-3 bg-[#273338] border rounded-xl text-sm text-[#f1f5f0] placeholder-[#CBD5C0]/50 focus:outline-none transition-colors ${errors.subject ? 'border-rose-500 focus:border-rose-500' : 'border-[#2B5748] focus:border-[#9CB080]'
+              }`}
           />
           {errors.subject && <p className="text-rose-400 text-xs mt-1">{errors.subject}</p>}
         </div>
@@ -214,9 +211,8 @@ export default function ContactForm() {
             onChange={handleChange}
             onBlur={handleBlur}
             placeholder="Describe your project, timeline, or question here..."
-            className={`w-full px-4 py-3 bg-[#273338] border rounded-xl text-sm text-[#f1f5f0] placeholder-[#CBD5C0]/50 focus:outline-none transition-colors resize-none ${
-              errors.message ? 'border-rose-500 focus:border-rose-500' : 'border-[#2B5748] focus:border-[#9CB080]'
-            }`}
+            className={`w-full px-4 py-3 bg-[#273338] border rounded-xl text-sm text-[#f1f5f0] placeholder-[#CBD5C0]/50 focus:outline-none transition-colors resize-none ${errors.message ? 'border-rose-500 focus:border-rose-500' : 'border-[#2B5748] focus:border-[#9CB080]'
+              }`}
           ></textarea>
           {errors.message && <p className="text-rose-400 text-xs mt-1">{errors.message}</p>}
         </div>
@@ -238,7 +234,12 @@ export default function ContactForm() {
                 Sending Message...
               </span>
             ) : (
-              'Send Message 🚀'
+              <span className="flex items-center gap-2">
+                <span>Send Message</span>
+                <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2">
+                  <path strokeLinecap="round" strokeLinejoin="round" d="M12 19l9 2-9-18-9 18 9-2zm0 0v-8" />
+                </svg>
+              </span>
             )}
           </Button>
         </div>

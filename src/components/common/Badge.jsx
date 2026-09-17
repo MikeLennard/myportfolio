@@ -2,7 +2,7 @@
  * Badge Component
  * Demonstrates functional component with props and user color palette
  */
-export default function Badge({ text, variant = 'default', size = 'md' }) {
+export default function Badge({ text, children, icon, variant = 'default', size = 'md' }) {
   const variantStyles = {
     default: 'bg-[#273338]/90 text-slate-300 border-[#2B5748]',
     primary: 'bg-[#2B5748]/70 text-[#9CB080] border-[#618764]/50',
@@ -19,9 +19,10 @@ export default function Badge({ text, variant = 'default', size = 'md' }) {
 
   return (
     <span
-      className={`inline-flex items-center gap-1 font-medium rounded-full border transition-all duration-200 ${variantStyles[variant] || variantStyles.default} ${sizeStyles[size] || sizeStyles.md}`}
+      className={`inline-flex items-center gap-1.5 font-medium rounded-full border transition-all duration-200 ${variantStyles[variant] || variantStyles.default} ${sizeStyles[size] || sizeStyles.md}`}
     >
-      {text}
+      {icon && <span className="inline-flex items-center">{icon}</span>}
+      {text || children}
     </span>
   );
 }

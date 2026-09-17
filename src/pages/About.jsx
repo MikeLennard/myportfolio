@@ -14,22 +14,38 @@ import { personalInfo, educationAndTimeline, skillsData } from '../data/portfoli
 const About = (props) => {
   const principles = [
     {
-      icon: "⚡",
+      icon: (
+        <svg className="w-7 h-7 text-[#F7DF1E]" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2">
+          <path strokeLinecap="round" strokeLinejoin="round" d="M13 10V3L4 14h7v7l9-11h-7z" />
+        </svg>
+      ),
       title: "Performance First",
       desc: "Optimized asset delivery, minimal re-renders, and fast page loads across all viewports."
     },
     {
-      icon: "🎨",
+      icon: (
+        <svg className="w-7 h-7 text-[#9CB080]" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2">
+          <path strokeLinecap="round" strokeLinejoin="round" d="M7 21a4 4 0 01-4-4 4 4 0 014-4 4 4 0 014 4 4 4 0 01-4 4zm0 0h12a2 2 0 002-2v-4a2 2 0 00-2-2h-2.343M11 7.343l1.657-1.657a2 2 0 012.828 0l2.829 2.829a2 2 0 010 2.828l-8.486 8.485M7 17h.01" />
+        </svg>
+      ),
       title: "User-Centric Design",
       desc: "Pixel-perfect interfaces with intuitive navigation, fluid animations, and high accessibility."
     },
     {
-      icon: "🧱",
+      icon: (
+        <svg className="w-7 h-7 text-[#61DAFB]" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2">
+          <path strokeLinecap="round" strokeLinejoin="round" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4" />
+        </svg>
+      ),
       title: "Clean Modular Code",
       desc: "Reusable functional components, structured separation of concerns, and clean hooks architecture."
     },
     {
-      icon: "🚀",
+      icon: (
+        <svg className="w-7 h-7 text-[#618764]" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2">
+          <path strokeLinecap="round" strokeLinejoin="round" d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6" />
+        </svg>
+      ),
       title: "Continuous Growth",
       desc: "Always exploring emerging frameworks, modern toolchains, and industry best practices."
     }

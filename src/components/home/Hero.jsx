@@ -53,7 +53,6 @@ export default function Hero() {
               }}
               className="px-5 py-3 rounded-xl bg-[#273338]/90 hover:bg-[#2B5748] text-[#9CB080] hover:text-white text-sm font-semibold border border-[#2B5748] flex items-center gap-2 transition-all cursor-pointer shadow-md"
             >
-              <span>📄</span>
               <span>Download CV</span>
             </a>
           </div>
