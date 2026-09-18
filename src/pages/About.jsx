@@ -27,44 +27,6 @@ const About = (props) => {
       }
     }
   }, []);
-  const principles = [
-    {
-      icon: (
-        <svg className="w-7 h-7 text-[#F7DF1E]" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2">
-          <path strokeLinecap="round" strokeLinejoin="round" d="M13 10V3L4 14h7v7l9-11h-7z" />
-        </svg>
-      ),
-      title: "Performance First",
-      desc: "Optimized asset delivery, minimal re-renders, and fast page loads across all viewports."
-    },
-    {
-      icon: (
-        <svg className="w-7 h-7 text-[#9CB080]" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2">
-          <path strokeLinecap="round" strokeLinejoin="round" d="M7 21a4 4 0 01-4-4 4 4 0 014-4 4 4 0 014 4 4 4 0 01-4 4zm0 0h12a2 2 0 002-2v-4a2 2 0 00-2-2h-2.343M11 7.343l1.657-1.657a2 2 0 012.828 0l2.829 2.829a2 2 0 010 2.828l-8.486 8.485M7 17h.01" />
-        </svg>
-      ),
-      title: "User-Centric Design",
-      desc: "Pixel-perfect interfaces with intuitive navigation, fluid animations, and high accessibility."
-    },
-    {
-      icon: (
-        <svg className="w-7 h-7 text-[#61DAFB]" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2">
-          <path strokeLinecap="round" strokeLinejoin="round" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4" />
-        </svg>
-      ),
-      title: "Clean Modular Code",
-      desc: "Reusable functional components, structured separation of concerns, and clean hooks architecture."
-    },
-    {
-      icon: (
-        <svg className="w-7 h-7 text-[#618764]" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2">
-          <path strokeLinecap="round" strokeLinejoin="round" d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6" />
-        </svg>
-      ),
-      title: "Continuous Growth",
-      desc: "Always exploring emerging frameworks, modern toolchains, and industry best practices."
-    }
-  ];
 
   return (
     <div className={`max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 animate-fadeIn ${props.class || ''}`}>
@@ -93,7 +55,7 @@ const About = (props) => {
             Hello! I'm <strong className="text-white">{personalInfo.name}</strong>, a developer based in {personalInfo.location}. My fascination with technology began when I realized how a few lines of code could create interactive tools used by people across the globe.
           </p>
           <p className="text-slate-400 leading-relaxed text-sm">
-            I specialize in the React ecosystem, creating seamless user interfaces backed by solid API architecture. I believe great software isn't just about code that functions—it's about code that is readable, scalable, and delivers a delightful user experience.
+            I develop full-stack web solutions and cross-platform mobile apps with Flutter, Dart, React, and PHP, supported by well-structured database systems. Along with software engineering, I am passionate about creative media—serving as Head Video Editor and multimedia director for student council initiatives.
           </p>
 
           <div className="pt-2 flex flex-wrap gap-3">
@@ -103,11 +65,11 @@ const About = (props) => {
             </div>
             <div className="bg-[#273338] border border-[#2B5748] px-4 py-2 rounded-xl text-xs">
               <span className="text-[#CBD5C0]">Status:</span>{' '}
-              <span className="text-[#9CB080] font-medium">Available for hire</span>
+              <span className="text-[#9CB080] font-medium">University Scholar</span>
             </div>
             <div className="bg-[#273338] border border-[#2B5748] px-4 py-2 rounded-xl text-xs">
               <span className="text-[#CBD5C0]">Primary Focus:</span>{' '}
-              <span className="text-[#9CB080] font-medium">React & Full-Stack</span>
+              <span className="text-[#9CB080] font-medium">Web, Mobile & Video Media</span>
             </div>
           </div>
         </div>
@@ -119,19 +81,19 @@ const About = (props) => {
             <ul className="space-y-3 text-sm text-[#f1f5f0]">
               <li className="flex items-center gap-2">
                 <span className="text-[#9CB080] font-bold">✓</span>
-                Proficient in Modern React 19, Hooks, & Vite
+                Consistent College Scholar - University Scholar at CLSU
               </li>
               <li className="flex items-center gap-2">
                 <span className="text-[#9CB080] font-bold">✓</span>
-                Strong understanding of state management & lifecycle
+                Full-Stack Web & Mobile (React, Flutter, Dart, PHP, MySQL)
               </li>
               <li className="flex items-center gap-2">
                 <span className="text-[#9CB080] font-bold">✓</span>
-                Clean CSS design systems (Tailwind + Custom CSS)
+                Head Video Editor for CLSU BSIT Multimedia Team & IMG
               </li>
               <li className="flex items-center gap-2">
                 <span className="text-[#9CB080] font-bold">✓</span>
-                REST API design, database schemas & integration
+                Group Project Developer & Indigenous Peoples Capstone Lead
               </li>
             </ul>
           </div>
@@ -151,24 +113,6 @@ const About = (props) => {
         </div>
       </div>
 
-      {/* Engineering Principles */}
-      <div className="mb-14">
-        <div className="text-center mb-8">
-          <span className="text-xs font-semibold uppercase tracking-wider text-[#9CB080]">Methodology</span>
-          <h2 className="text-2xl font-bold text-white mt-1">Core Principles</h2>
-        </div>
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5">
-          {principles.map((p, idx) => (
-            <div key={idx} className="glass-panel p-5 rounded-2xl group hover:border-indigo-500/40 transition-all">
-              <div className="text-3xl mb-3 group-hover:scale-110 transition-transform inline-block">
-                {p.icon}
-              </div>
-              <h3 className="text-base font-bold text-white mb-1.5">{p.title}</h3>
-              <p className="text-xs text-slate-400 leading-relaxed">{p.desc}</p>
-            </div>
-          ))}
-        </div>
-      </div>
 
       {/* Skills & Timeline Split Section */}
       <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
@@ -198,7 +142,7 @@ const About = (props) => {
             <span className="text-xs font-semibold uppercase tracking-wider text-[#9CB080]">Accreditations</span>
             <h2 className="text-3xl font-extrabold text-white mt-1">Licenses & Certifications</h2>
             <p className="text-[#CBD5C0] text-sm mt-1">
-              Verified certifications in modern web architecture, JavaScript algorithms, and full-stack development
+              Verified credentials and national accreditations across Web Development, Networking, Cisco Systems, Data Analytics, and IT Support
             </p>
           </div>
           <span className="text-xs text-[#CBD5C0] bg-[#273338] px-3.5 py-1.5 rounded-xl border border-[#2B5748] self-start sm:self-auto font-medium">

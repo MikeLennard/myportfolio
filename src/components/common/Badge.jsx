@@ -9,6 +9,7 @@ export default function Badge({ text, children, icon, variant = 'default', size 
     success: 'bg-[#2B5748]/90 text-[#9CB080] border-[#618764]',
     warning: 'bg-amber-950/60 text-amber-200 border-amber-800/50',
     accent: 'bg-[#2B5748]/80 text-[#9CB080] border-[#9CB080]/40',
+    creative: 'bg-[#233b31] text-[#bbf7d0] border-[#9CB080]/70 shadow-sm',
   };
 
   const sizeStyles = {

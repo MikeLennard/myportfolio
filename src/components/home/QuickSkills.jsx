@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, useMemo } from 'react';
 import Badge from '../common/Badge';
 import TechIcon from '../common/TechIcon';
 
@@ -6,16 +6,31 @@ import TechIcon from '../common/TechIcon';
  * QuickSkills Component
  * Styled with custom palette (#9CB080, #618764, #2B5748, #273338)
  */
-export default function QuickSkills({ skills }) {
-  const [activeTab, setActiveTab] = useState('frontend');
+export default function QuickSkills({ skills = {} }) {
+  const [activeTab, setActiveTab] = useState('all');
 
   const tabs = [
-    { key: 'frontend', label: 'Frontend Stack' },
-    { key: 'backend', label: 'Backend & DB' },
-    { key: 'tools', label: 'Tools & DevOps' }
+    { key: 'all', label: 'All' },
+    { key: 'frontend', label: 'Frontend & Web' },
+    { key: 'backend', label: 'Backend & Core' },
+    { key: 'mobile', label: 'Mobile Dev' }
   ];
 
-  const currentSkills = skills[activeTab] || [];
+  const allSkills = useMemo(() => {
+    const list = Object.values(skills).flat();
+    const seen = new Set();
+    return list.filter((item) => {
+      if (!item?.name) return false;
+      const lower = item.name.toLowerCase();
+      if (seen.has(lower)) return false;
+      seen.add(lower);
+      return true;
+    });
+  }, [skills]);
+
+  const currentSkills = activeTab === 'all' 
+    ? (skills.all || allSkills) 
+    : (skills[activeTab] || []);
 
   return (
     <section className="py-12 border-t border-[#2B5748]">
@@ -49,17 +64,14 @@ export default function QuickSkills({ skills }) {
         {currentSkills.map((skill, index) => (
           <div
             key={index}
-            className="glass-panel p-4 rounded-xl flex items-center justify-between group hover:border-[#9CB080]/50 transition-all"
+            className="glass-panel p-4 rounded-xl flex items-center gap-3.5 group hover:border-[#9CB080]/50 transition-all"
           >
-            <div className="flex items-center gap-3">
-              <span className="p-2.5 rounded-xl bg-[#2B5748]/60 border border-[#618764]/30 group-hover:scale-110 group-hover:border-[#9CB080]/50 transition-all flex items-center justify-center">
-                <TechIcon name={skill.name} className="w-5 h-5" />
-              </span>
-              <span className="font-semibold text-slate-200 text-sm">{skill.name}</span>
-            </div>
-            <div className="text-xs font-mono font-bold text-[#9CB080]">
-              {skill.level}%
-            </div>
+            <span className="p-2.5 rounded-xl bg-[#2B5748]/60 border border-[#618764]/30 group-hover:scale-110 group-hover:border-[#9CB080]/50 transition-all flex items-center justify-center shrink-0">
+              <TechIcon name={skill.name} className="w-5 h-5" />
+            </span>
+            <span className="font-semibold text-slate-200 text-sm group-hover:text-[#9CB080] transition-colors">
+              {skill.name}
+            </span>
           </div>
         ))}
       </div>

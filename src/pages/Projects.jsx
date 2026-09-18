@@ -20,7 +20,8 @@ export default function Projects() {
 
   // Project categories
   const categories = useMemo(() => {
-    return ['All', 'Personal', 'Groupings'];
+    const unique = Array.from(new Set(projectsData.map((p) => p.category)));
+    return ['All', ...unique];
   }, []);
 
   // Filter projects based on active category and search query
