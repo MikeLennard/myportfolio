@@ -2,7 +2,6 @@ import { useState } from 'react';
 
 /**
  * ContactInfo Component
- * Styled with custom palette (#9CB080, #618764, #2B5748, #273338)
  */
 export default function ContactInfo({ info }) {
   const [copied, setCopied] = useState(false);

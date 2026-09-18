@@ -4,7 +4,6 @@ import { personalInfo } from '../../data/portfolioData';
 
 /**
  * ContactForm Component
- * Styled with custom palette (#9CB080, #618764, #2B5748, #273338)
  * Sends real emails to personalInfo.email via FormSubmit API
  */
 export default function ContactForm() {
@@ -136,9 +135,6 @@ export default function ContactForm() {
   return (
     <div className="glass-panel p-6 sm:p-8 rounded-3xl hover:border-[#9CB080]/50">
       <h3 className="text-xl font-bold text-white mb-2">Send a Message</h3>
-      <p className="text-[#CBD5C0] text-sm mb-6">
-        Have a question, collaboration idea, or project proposition? Fill out the form below.
-      </p>
 
       <form onSubmit={handleSubmit} className="space-y-4" noValidate>
         {/* Name Field */}
