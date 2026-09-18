@@ -34,10 +34,10 @@ const About = (props) => {
       <div className="text-center max-w-3xl mx-auto mb-12">
         <Badge text="About Me" variant="primary" size="md" />
         <h1 className="text-4xl sm:text-5xl font-extrabold text-white mt-3 mb-4 tracking-tight">
-          Passionate About <span className="gradient-text">Web Architecture</span>
+          Dedicated to <span className="gradient-text">Software & Multimedia</span>
         </h1>
-        <p className="text-slate-400 text-base sm:text-lg leading-relaxed">
-          Here is a deeper look into my background, core competencies, and career journey in software engineering.
+        <p className="text-[#CBD5C0] text-base sm:text-lg leading-relaxed">
+          BSIT Student & Consistent University Scholar at Central Luzon State University (CLSU) — specialized in Web/Mobile Development and Creative Media.
         </p>
       </div>
 

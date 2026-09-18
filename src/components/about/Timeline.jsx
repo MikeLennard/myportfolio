@@ -1,5 +1,4 @@
 import { useState } from 'react';
-import Badge from '../common/Badge';
 
 /**
  * Timeline Component
@@ -42,35 +41,6 @@ export default function Timeline({ items = [] }) {
     return sortAscending ? orderA - orderB : orderB - orderA;
   });
 
-  const getBadgeProps = (type) => {
-    switch (type) {
-      case 'education':
-        return {
-          text: 'EDUCATION',
-          variant: 'primary',
-          icon: '🎓'
-        };
-      case 'development':
-      case 'experience':
-        return {
-          text: 'DEVELOPMENT',
-          variant: 'success',
-          icon: '💻'
-        };
-      case 'video-editing':
-        return {
-          text: 'VIDEO EDITING',
-          variant: 'creative',
-          icon: '🎬'
-        };
-      default:
-        return {
-          text: (type || '').toUpperCase(),
-          variant: 'default',
-          icon: null
-        };
-    }
-  };
 
   const getDotStyle = (type) => {
     if (type === 'video-editing') {
@@ -127,40 +97,30 @@ export default function Timeline({ items = [] }) {
 
       {/* Timeline items list */}
       <div className="relative pl-6 border-l-2 border-[#618764]/40 space-y-8 my-4">
-        {sortedItems.map((item) => {
-          const badgeProps = getBadgeProps(item.type);
+        {sortedItems.map((item) => (
+          <div key={item.id} className="relative group">
+            {/* Timeline node dot */}
+            <div
+              className={`absolute -left-[31px] top-1.5 w-4 h-4 rounded-full border-4 border-[#273338] group-hover:scale-125 transition-transform ${getDotStyle(
+                item.type
+              )}`}
+            ></div>
 
-          return (
-            <div key={item.id} className="relative group">
-              {/* Timeline node dot */}
-              <div
-                className={`absolute -left-[31px] top-1.5 w-4 h-4 rounded-full border-4 border-[#273338] group-hover:scale-125 transition-transform ${getDotStyle(
-                  item.type
-                )}`}
-              ></div>
-
-              <div className="glass-panel p-5 rounded-2xl hover:border-[#9CB080]/50 transition-all">
-                <div className="flex flex-wrap items-center justify-between gap-2 mb-2">
-                  <span className="text-xs font-mono font-bold text-[#9CB080] bg-[#2B5748] px-2.5 py-0.5 rounded-md border border-[#618764]/40">
-                    {item.year}
-                  </span>
-                  <Badge
-                    text={badgeProps.text}
-                    variant={badgeProps.variant}
-                    size="sm"
-                    icon={badgeProps.icon ? <span className="text-xs">{badgeProps.icon}</span> : null}
-                  />
-                </div>
-
-                <h4 className="text-lg font-bold text-white group-hover:text-[#9CB080] transition-colors">
-                  {item.role}
-                </h4>
-                <p className="text-xs font-medium text-[#CBD5C0] mb-2">{item.institution}</p>
-                <p className="text-sm text-[#f1f5f0] leading-relaxed">{item.description}</p>
+            <div className="glass-panel p-5 rounded-2xl hover:border-[#9CB080]/50 transition-all">
+              <div className="flex items-center gap-2 mb-2">
+                <span className="text-xs font-mono font-bold text-[#9CB080] bg-[#2B5748] px-2.5 py-0.5 rounded-md border border-[#618764]/40">
+                  {item.year}
+                </span>
               </div>
+
+              <h4 className="text-lg font-bold text-white group-hover:text-[#9CB080] transition-colors">
+                {item.role}
+              </h4>
+              <p className="text-xs font-medium text-[#CBD5C0] mb-2">{item.institution}</p>
+              <p className="text-sm text-[#f1f5f0] leading-relaxed">{item.description}</p>
             </div>
-          );
-        })}
+          </div>
+        ))}
       </div>
     </div>
   );

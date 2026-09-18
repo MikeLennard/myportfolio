@@ -3,9 +3,8 @@ export const personalInfo = {
   title: "BSIT Developer & Multimedia Specialist",
   tagline: "Developing web systems, mobile applications with Flutter/Dart, and crafting dynamic multimedia content.",
   bio: "I am a BSIT student at Central Luzon State University and a consistent University Scholar. I build practical, high-performance web and mobile systems—including an ongoing Capstone project for Indigenous People in Nueva Ecija—and serve as Head Video Editor for the CLSU BSIT Multimedia Team.",
-  location: "Nueva Ecija, Central Luzon, Philippines",
+  location: "Science City of Muñoz, Nueva Ecija, Philippines",
   email: "lennarddelacruz27@gmail.com",
-  phone: "+63 (912) 345-6789",
   avatar: "/profile.jpg",
   availableForHire: true,
   socialLinks: {
@@ -408,3 +407,5 @@ export const certificatesData = [
     featured: false
   }
 ];
+
+
