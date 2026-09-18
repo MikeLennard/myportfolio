@@ -11,8 +11,7 @@ export const personalInfo = {
   socialLinks: {
     github: "https://github.com/MikeLennard",
     linkedin: "https://www.linkedin.com/in/mike-lennard-dela-cruz-0816381b8",
-    twitter: "https://twitter.com",
-    discord: "https://discord.com"
+    facebook: "https://www.facebook.com/mikelennard.delacruz/"
   }
 };
 
@@ -185,51 +184,7 @@ export const skillsData = {
 };
 
 export const educationAndTimeline = [
-  {
-    id: "t-capstone",
-    year: "2026 (Ongoing)",
-    sortOrder: 2026.3,
-    role: "Capstone Developer",
-    institution: "Central Luzon State University",
-    description: "Developer of the Capstone project: Enhanced Web-Based Record Management System for Indigenous People in Nueva Ecija, alongside NBL Apparel E-commerce platform.",
-    type: "development"
-  },
-  {
-    id: "t-img",
-    year: "Feb 2026 - Apr 2026",
-    sortOrder: 2026.1,
-    role: "Video Editor (Creative Division)",
-    institution: "IMG (ITSC Media Group) · Seasonal",
-    description: "Edited and produced multimedia coverage for BSIT events, with final outputs published on the official Facebook page of the CLSU Information Technology Student Council.",
-    type: "video-editing"
-  },
-  {
-    id: "t-bsit-head",
-    year: "Jul 2025 - Feb 2026",
-    sortOrder: 2025.7,
-    role: "Head Video Editor",
-    institution: "Central Luzon State University BSIT Council",
-    description: "Head of Video Editing for the CLSU BSIT Multimedia Team. Led video production workflows, mentored editors, and directed multimedia coverage across BSIT Council events.",
-    type: "video-editing"
-  },
-  {
-    id: "t-dev-2025",
-    year: "2025",
-    sortOrder: 2025.2,
-    role: "Group Project Developer",
-    institution: "CLSU BSIT Academic Projects",
-    description: "Collaborated on multi-platform software projects: Patient Management System, Library Management System, Coffee Shop App, and ITour Tourist Spot Booking App.",
-    type: "development"
-  },
-  {
-    id: "t-bsit-editor",
-    year: "Aug 2024 - Jul 2025",
-    sortOrder: 2024.8,
-    role: "Video Editor",
-    institution: "Central Luzon State University BSIT Council",
-    description: "Produced engaging video edits, event recaps, promotional trailers, and multimedia assets for the CLSU BSIT Multimedia Team.",
-    type: "video-editing"
-  },
+  // Education
   {
     id: "t-clsu",
     year: "Aug 2023 - Present",
@@ -256,6 +211,55 @@ export const educationAndTimeline = [
     institution: "Muñoz National High School Main",
     description: "Specialized in Computer System Servicing, Computer Networking, hardware diagnostics, and Microsoft Office productivity suites.",
     type: "education"
+  },
+
+  // Development
+  {
+    id: "t-capstone",
+    year: "2026 (Ongoing)",
+    sortOrder: 2026.3,
+    role: "Capstone Developer",
+    institution: "Central Luzon State University",
+    description: "Developer of the Capstone project: Enhanced Web-Based Record Management System for Indigenous People in Nueva Ecija, alongside NBL Apparel E-commerce platform.",
+    type: "development"
+  },
+  {
+    id: "t-dev-2025",
+    year: "2025",
+    sortOrder: 2025.2,
+    role: "Group Project Developer",
+    institution: "CLSU BSIT Academic Projects",
+    description: "Collaborated on multi-platform software projects: Patient Management System, Library Management System, Coffee Shop App, and ITour Tourist Spot Booking App.",
+    type: "development"
+  },
+
+  // Video Editing
+  {
+    id: "t-img",
+    year: "Feb 2026 - Apr 2026",
+    sortOrder: 2026.1,
+    role: "Video Editor (Creative Division)",
+    institution: "IMG (ITSC Media Group) · Seasonal",
+    description: "Edited and produced multimedia coverage for BSIT events, with final outputs published on the official Facebook page of the CLSU Information Technology Student Council.",
+    type: "video-editing"
+  },
+  {
+    id: "t-bsit-head",
+    year: "Jul 2025 - Feb 2026",
+    sortOrder: 2025.7,
+    role: "Head Video Editor",
+    institution: "Central Luzon State University BSIT Council",
+    description: "Head of Video Editing for the CLSU BSIT Multimedia Team. Led video production workflows, mentored editors, and directed multimedia coverage across BSIT Council events.",
+    type: "video-editing"
+  },
+  {
+    id: "t-bsit-editor",
+    year: "Aug 2024 - Jul 2025",
+    sortOrder: 2024.8,
+    role: "Video Editor",
+    institution: "Central Luzon State University BSIT Council",
+    description: "Produced engaging video edits, event recaps, promotional trailers, and multimedia assets for the CLSU BSIT Multimedia Team.",
+    type: "video-editing"
   }
 ];
 

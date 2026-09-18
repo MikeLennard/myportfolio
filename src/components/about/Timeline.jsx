@@ -22,7 +22,21 @@ export default function Timeline({ items = [] }) {
     return item.type === filter;
   });
 
+  const typePriority = {
+    'education': 1,
+    'development': 2,
+    'experience': 2,
+    'video-editing': 3
+  };
+
   const sortedItems = [...filteredItems].sort((a, b) => {
+    if (filter === 'all') {
+      const priorityA = typePriority[a.type] || 99;
+      const priorityB = typePriority[b.type] || 99;
+      if (priorityA !== priorityB) {
+        return priorityA - priorityB;
+      }
+    }
     const orderA = a.sortOrder || 0;
     const orderB = b.sortOrder || 0;
     return sortAscending ? orderA - orderB : orderB - orderA;

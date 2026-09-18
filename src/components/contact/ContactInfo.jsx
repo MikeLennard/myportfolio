@@ -122,6 +122,42 @@ export default function ContactInfo({ info }) {
             </svg>
           </a>
         </div>
+
+        {/* Facebook Card */}
+        {info.socialLinks?.facebook && (
+          <div className="glass-panel p-5 rounded-2xl flex items-center justify-between hover:border-[#9CB080]/50 transition-colors">
+            <div className="flex items-center gap-3">
+              <div className="w-10 h-10 rounded-xl bg-[#2B5748]/70 border border-[#618764]/40 flex items-center justify-center text-[#1877F2]">
+                <svg className="w-5 h-5 fill-current" viewBox="0 0 24 24" aria-hidden="true">
+                  <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z" />
+                </svg>
+              </div>
+              <div>
+                <div className="text-xs text-[#CBD5C0]">Facebook</div>
+                <a
+                  href={info.socialLinks.facebook}
+                  target="_blank"
+                  rel="noreferrer"
+                  className="text-sm font-semibold text-white hover:text-[#9CB080] transition-colors"
+                >
+                  mikelennard.delacruz
+                </a>
+              </div>
+            </div>
+            <a
+              href={info.socialLinks.facebook}
+              target="_blank"
+              rel="noreferrer"
+              className="px-3 py-1.5 rounded-lg text-xs font-medium bg-[#273338] hover:bg-[#2B5748] border border-[#2B5748] text-[#CBD5C0] hover:text-white transition-colors flex items-center gap-1"
+              title="Visit Facebook profile"
+            >
+              <span>Visit</span>
+              <svg className="w-3 h-3" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2">
+                <path strokeLinecap="round" strokeLinejoin="round" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+              </svg>
+            </a>
+          </div>
+        )}
       </div>
     </div>
   );
