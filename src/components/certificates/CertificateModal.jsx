@@ -16,19 +16,9 @@ export default function CertificateModal({ certificate, onClose }) {
     setCurrentImageIndex(0);
   }
 
-  const rawImages = certificate?.images?.length > 0
+  const images = certificate?.images?.length > 0
     ? certificate.images
     : (certificate?.image ? [certificate.image] : []);
-
-  const sanitizePath = (p) => {
-    if (!p) return '';
-    if (p.startsWith('http://') || p.startsWith('https://')) return p;
-    if (p.startsWith('public/')) return `/${p.slice(7)}`;
-    if (!p.startsWith('/')) return `/${p}`;
-    return p;
-  };
-
-  const images = rawImages.map(sanitizePath);
   const totalImages = images.length;
   const currentImage = images[currentImageIndex] || images[0] || '';
 

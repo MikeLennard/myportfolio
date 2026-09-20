@@ -1,23 +1,27 @@
+// - useMemo: optimizes performance by caching the combined, deduplicated skills list
 import { useState, useMemo } from 'react';
 import TechIcon from '../common/TechIcon';
 
 /**
- * TechStack Component
- * Styled with custom palette (#9CB080, #618764, #2B5748, #273338)
- * Interactive tech chip grid with category filtering support
+ * Purpose:
+ * - Displays an interactive, categorized catalog of technical skills and tools.
+ * - Allows visitors to filter skills by 'All', 'Frontend', or 'Backend & DB'.
  */
 export default function TechStack({ skills = {} }) {
   const [activeCategory, setActiveCategory] = useState('all');
 
+  // Defines the available filter tabs displayed at the top of the card
   const categories = [
     { key: 'all', name: 'All' },
     { key: 'frontend', name: 'Frontend' },
     { key: 'backend', name: 'Backend & DB' }
   ];
-
+  // Gathers skills from all categories and removes any duplicates.
   const allSkills = useMemo(() => {
-    const list = Object.values(skills).flat();
+    const list = Object.values(skills).flat()
     const seen = new Set();
+
+    // 3. Filter list so each skill appears only once
     return list.filter((item) => {
       if (!item?.name) return false;
       const lower = item.name.toLowerCase();
@@ -27,10 +31,13 @@ export default function TechStack({ skills = {} }) {
     });
   }, [skills]);
 
-  const currentSkills = activeCategory === 'all' 
-    ? (skills.all || allSkills) 
+  // Determines which skills array to display based on the active tab:
+  const currentSkills = activeCategory === 'all'
+    ? (skills.all || allSkills)
     : (skills[activeCategory] || []);
 
+
+  // UI RENDERING (JSX)
   return (
     <div className="glass-panel p-6 rounded-2xl space-y-6 hover:border-[#9CB080]/50">
       <div className="flex flex-wrap items-center justify-between gap-3 pb-4 border-b border-[#2B5748]">
@@ -38,18 +45,17 @@ export default function TechStack({ skills = {} }) {
           {currentSkills.length} Technologies
         </span>
 
-        {/* Tab Buttons */}
+        {/* Category Filter Tabs */}
         <div className="flex flex-wrap bg-[#273338] p-1 rounded-xl border border-[#2B5748] gap-1">
           {categories.map((cat) => (
             <button
               key={cat.key}
               type="button"
               onClick={() => setActiveCategory(cat.key)}
-              className={`px-3 py-1.5 rounded-lg text-xs font-semibold transition-all cursor-pointer ${
-                activeCategory === cat.key
+              className={`px-3 py-1.5 rounded-lg text-xs font-semibold transition-all cursor-pointer ${activeCategory === cat.key
                   ? 'bg-[#2B5748] text-[#9CB080] border border-[#9CB080]/40 shadow-md'
                   : 'text-[#CBD5C0] hover:text-white'
-              }`}
+                }`}
             >
               {cat.name}
             </button>
@@ -57,7 +63,6 @@ export default function TechStack({ skills = {} }) {
         </div>
       </div>
 
-      {/* Skills Grid */}
       <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 pt-1">
         {currentSkills.map((skill, idx) => (
           <div
@@ -67,6 +72,7 @@ export default function TechStack({ skills = {} }) {
             <span className="w-8 h-8 rounded-lg bg-[#2B5748]/70 border border-[#618764]/40 flex items-center justify-center group-hover:scale-110 transition-transform shrink-0">
               <TechIcon name={skill.name} className="w-4 h-4" />
             </span>
+
             <span className="text-xs sm:text-sm font-semibold text-[#f1f5f0] group-hover:text-[#9CB080] transition-colors leading-snug">
               {skill.name}
             </span>
@@ -76,3 +82,4 @@ export default function TechStack({ skills = {} }) {
     </div>
   );
 }
+

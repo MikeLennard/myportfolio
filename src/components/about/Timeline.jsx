@@ -1,13 +1,8 @@
 import { useState } from 'react';
 
-/**
- * Timeline Component
- * Styled with user palette (#9CB080, #618764, #2B5748, #273338)
- * Sorted chronologically by year with toggle support
- */
 export default function Timeline({ items = [] }) {
   const [filter, setFilter] = useState('all');
-  const [sortAscending, setSortAscending] = useState(false); // default: Newest first
+  const [sortAscending, setSortAscending] = useState(false);
 
   const filterTabs = [
     { key: 'all', label: 'All' },
@@ -22,8 +17,7 @@ export default function Timeline({ items = [] }) {
 
   const typePriority = {
     'education': 1,
-    'development': 2,
-    'experience': 2
+    'development': 2
   };
 
   const sortedItems = [...filteredItems].sort((a, b) => {
@@ -54,8 +48,8 @@ export default function Timeline({ items = [] }) {
         {/* Category Tabs */}
         <div className="flex flex-wrap items-center gap-2">
           {filterTabs.map((tab) => {
-            const count = tab.key === 'all' 
-              ? items.length 
+            const count = tab.key === 'all'
+              ? items.length
               : items.filter((i) => i.type === tab.key).length;
 
             return (
@@ -63,11 +57,10 @@ export default function Timeline({ items = [] }) {
                 key={tab.key}
                 type="button"
                 onClick={() => setFilter(tab.key)}
-                className={`px-3.5 py-1.5 rounded-xl text-xs font-semibold uppercase tracking-wider transition-colors cursor-pointer flex items-center gap-1.5 ${
-                  filter === tab.key
-                    ? 'bg-[#2B5748] text-[#9CB080] border border-[#9CB080]/40 shadow-md'
-                    : 'bg-[#273338] text-[#CBD5C0] hover:text-white border border-[#2B5748]'
-                }`}
+                className={`px-3.5 py-1.5 rounded-xl text-xs font-semibold uppercase tracking-wider transition-colors cursor-pointer flex items-center gap-1.5 ${filter === tab.key
+                  ? 'bg-[#2B5748] text-[#9CB080] border border-[#9CB080]/40 shadow-md'
+                  : 'bg-[#273338] text-[#CBD5C0] hover:text-white border border-[#2B5748]'
+                  }`}
               >
                 <span>{tab.label}</span>
                 <span className="text-[10px] opacity-75 font-mono">({count})</span>

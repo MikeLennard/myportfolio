@@ -1,23 +1,10 @@
 import TechIcon from '../common/TechIcon';
 
-/**
- * CertificateCard Component
- * Displays verified certification with issuer, credential ID, skills, and preview modal trigger.
- * Styled with custom palette (#9CB080, #618764, #2B5748, #273338).
- */
 export default function CertificateCard({ certificate, onSelectCertificate }) {
   const { title, issuer, issueDate, image, images = [], skills = [] } = certificate;
 
-  const rawImages = images.length > 0 ? images : (image ? [image] : []);
-  const sanitizePath = (p) => {
-    if (!p) return '';
-    if (p.startsWith('http://') || p.startsWith('https://')) return p;
-    if (p.startsWith('public/')) return `/${p.slice(7)}`;
-    if (!p.startsWith('/')) return `/${p}`;
-    return p;
-  };
-  const allImages = rawImages.map(sanitizePath);
-  const displayImage = allImages[0] || (image ? sanitizePath(image) : '');
+  const allImages = images.length > 0 ? images : (image ? [image] : []);
+  const displayImage = allImages[0] || '';
   const hasMultipleImages = allImages.length > 1;
 
   return (
