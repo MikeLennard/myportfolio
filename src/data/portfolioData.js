@@ -22,11 +22,11 @@ export const projectsData = [
     shortDesc: "A secure web system to store, organize, and protect official records for indigenous communities in Nueva Ecija.",
     fullDesc: "My ongoing college capstone project built to help indigenous communities manage their records online. It replaces manual paperwork with a secure web system where admins can register members, manage family records, search community data quickly, and control who can view sensitive information.",
     images: [
-      "public/projects/ncip1.png",
-      "public/projects/ncip2.png",
-      "public/projects/ncip3.png",
-      "public/projects/ncip4.png",
-      "public/projects/ncip5.png"
+      "/projects/ncip1.png",
+      "/projects/ncip2.png",
+      "/projects/ncip3.png",
+      "/projects/ncip4.png",
+      "/projects/ncip5.png"
     ],
     tags: ["Laravel", "Vite", "TailwindCSS", "MySQL"],
     featured: true,
@@ -45,11 +45,11 @@ export const projectsData = [
     shortDesc: "An online clothing shop where users can browse apparel, filter products, and place orders.",
     fullDesc: "A group web project built for a clothing brand. Customers can view apparel collections, filter items by category, add clothes to their cart, and see their order summary on a clean, mobile-friendly website.",
     images: [
-      "public/projects/nbl1.png",
-      "public/projects/nbl2.png",
-      "public/projects/nbl3.png",
-      "public/projects/nbl4.png",
-      "public/projects/nbl5.png"
+      "/projects/nbl1.png",
+      "/projects/nbl2.png",
+      "/projects/nbl3.png",
+      "/projects/nbl4.png",
+      "/projects/nbl5.png"
     ],
     tags: ["PHP", "Bootstrap", "MySQL", "JavaScript"],
     featured: true,
@@ -68,11 +68,11 @@ export const projectsData = [
     shortDesc: "A web app for clinics to manage patient records, doctor appointments, and checkup history.",
     fullDesc: "A web-based system built to help clinic staff track patient visits and medical logs digitally. Doctors and staff can register new patients, schedule checkup appointments, save medical notes, and find past records in seconds.",
     images: [
-      "public/projects/pms1.png",
-      "public/projects/pms2.png",
-      "public/projects/pms3.png",
-      "public/projects/pms4.png",
-      "public/projects/pms5.png"
+      "/projects/pms1.png",
+      "/projects/pms2.png",
+      "/projects/pms3.png",
+      "/projects/pms4.png",
+      "/projects/pms5.png"
     ],
     tags: ["PHP", "MySQL", "Bootstrap", "JavaScript"],
     featured: true,
@@ -91,10 +91,10 @@ export const projectsData = [
     shortDesc: "A mobile app built with Flutter to explore popular tourist spots and book trips easily.",
     fullDesc: "A mobile app developed with Flutter and Dart to help people find and visit local tourist destinations. Users can explore travel spots, read details, view photos, and book their visits directly from their phones.",
     images: [
-      "public/projects/Itour1.png",
-      "public/projects/Itour2.png",
-      "public/projects/Itour3.png",
-      "public/projects/Itour4.png"
+      "/projects/Itour1.png",
+      "/projects/Itour2.png",
+      "/projects/Itour3.png",
+      "/projects/Itour4.png"
     ],
     tags: ["Flutter", "Dart", "Mobile App"],
     featured: false,
@@ -113,9 +113,9 @@ export const projectsData = [
     shortDesc: "A web-based library system to track book inventory, student borrowing, and return dates.",
     fullDesc: "A library management system built with PHP and MySQL for schools. It lets librarians add and organize books, manage student library accounts, record borrowed and returned books, and track overdue fines.",
     images: [
-      "public/projects/library1.png",
-      "public/projects/library2.png",
-      "public/projects/library3.png"
+      "/projects/library1.png",
+      "/projects/library2.png",
+      "/projects/library3.png"
     ],
     tags: ["PHP", "MySQL", "HTML", "CSS"],
     featured: false,
@@ -225,13 +225,12 @@ export const certificatesData = [
     issuer: "Central Luzon State University",
     issuerLogo: "clsu",
     issueDate: "2023 - Present",
-    image: "/certificates/scholar1.png",
     images: [
-      "public/certificates/scholar1.png",
-      "public/certificates/scholar2.png",
-      "public/certificates/scholar3.png",
-      "public/certificates/scholar4.png",
-      "public/certificates/scholar5.png"
+      "/certificates/scholar1.png",
+      "/certificates/scholar2.png",
+      "/certificates/scholar3.png",
+      "/certificates/scholar4.png",
+      "/certificates/scholar5.png"
     ],
     skills: ["Software Development", "Web Development"],
     description: "Awarded by Central Luzon State University for consistent scholastic distinction, maintaining academic honors every semester in the BS Information Technology curriculum.",
@@ -244,11 +243,11 @@ export const certificatesData = [
     issuerLogo: "psite",
     issueDate: "Apr 2025",
     images: [
-      "public/certificates/irciteve2.png",
-      "public/certificates/irciteve1.png",
-      "public/certificates/irciteve4.png",
-      "public/certificates/irciteve3.png",
-      "public/certificates/irciteanimation1.png"
+      "/certificates/irciteve2.png",
+      "/certificates/irciteve1.png",
+      "/certificates/irciteve4.png",
+      "/certificates/irciteve3.png",
+      "/certificates/irciteanimation1.png"
     ],
     skills: ["Video Editing", "Animation"],
     description: "Certificate of Participation and competitive multimedia presentation in video editing at the Regional Conference in Information Technology Education (IRCITE 2026).",
@@ -260,7 +259,7 @@ export const certificatesData = [
     issuer: "TESDA",
     issuerLogo: "tesda",
     issueDate: "2023",
-    image: "public/certificates/NC2.png",
+    image: "/certificates/NC2.png",
     skills: ["Network Administration", "Computer Network"],
     description: "National Certificate II validating technical competency in computer hardware assembly, OS installation and configuration, setup of computer networks and servers, and maintenance and repair of computer systems.",
     featured: true
@@ -272,10 +271,10 @@ export const certificatesData = [
     issuerLogo: "dict",
     issueDate: "Mar 2026",
     images: [
-      "public/certificates/web4.png",
-      "public/certificates/web3.png",
-      "public/certificates/web2.png",
-      "public/certificates/web1.png"
+      "/certificates/web4.png",
+      "/certificates/web3.png",
+      "/certificates/web2.png",
+      "/certificates/web1.png"
     ],
     skills: ["HTML", "CSS", "JavaScript"],
     description: "Government-accredited ICT training series covering WebDev via Cloud (WD008), Basic JavaScript for WebDev (WD003), and Designing a Web Page using HTML and CSS (WD002).",
@@ -288,8 +287,8 @@ export const certificatesData = [
     issuerLogo: "coursera",
     issueDate: "Mar 2026",
     images: [
-      "public/certificates/datavisualization1.png",
-      "public/certificates/datavisualization2.png"
+      "/certificates/datavisualization1.png",
+      "/certificates/datavisualization2.png"
     ],
     skills: ["Data Scalability and Analytics", "Python"],
     description: "Hands-on data visualization specialization focused on building interactive web-based charts, exploratory dashboards, and statistical plots with Python Bokeh and Plotly.",
@@ -302,8 +301,8 @@ export const certificatesData = [
     issuerLogo: "cisco",
     issueDate: "Feb 2025",
     images: [
-      "public/certificates/packettracer1.png",
-      "public/certificates/packettracer2.png"
+      "/certificates/packettracer1.png",
+      "/certificates/packettracer2.png"
     ],
     skills: ["Packet Tracer", "Network Administration"],
     description: "Explored advanced network topology design, simulation of enterprise LAN/WAN environments, routing tables, and real-time packet flow verification using Cisco Packet Tracer.",
@@ -315,7 +314,7 @@ export const certificatesData = [
     issuer: "Cisco",
     issuerLogo: "cisco",
     issueDate: "Mar 2026",
-    image: "public/certificates/ITSupport.png",
+    image: "/certificates/ITSupport.png",
     skills: ["Network Administration", "Computer Networking"],
     description: "Validation in enterprise security fundamentals, secure remote workstation connectivity, firewall policies, endpoint hardening, and network troubleshooting.",
     featured: false
@@ -327,8 +326,8 @@ export const certificatesData = [
     issuerLogo: "cisco",
     issueDate: "Feb 2026",
     images: [
-      "public/certificates/basics1.png",
-      "public/certificates/basics2.png"
+      "/certificates/basics1.png",
+      "/certificates/basics2.png"
     ],
     skills: ["Network Administration", "Computer Networking"],
     description: "Industry-aligned validation verified via Credly covering core IT support methodologies, customer issue ticketing, triage workflows, and operating system diagnostics.",
@@ -340,7 +339,7 @@ export const certificatesData = [
     issuer: "DICT",
     issuerLogo: "dict",
     issueDate: "Jun 2024",
-    image: "public/certificates/wordpress.png",
+    image: "/certificates/wordpress.png",
     skills: ["WordPress Design", "Web Development"],
     description: "Wordpress Essentials training covering installation, cloud hosting deployment, custom theme styling, plugin ecosystem, and web content administration.",
     featured: false
@@ -351,7 +350,7 @@ export const certificatesData = [
     issuer: "Cisco",
     issuerLogo: "cisco",
     issueDate: "2025",
-    image: "public/certificates/reports.png",
+    image: "/certificates/reports.png",
     skills: ["Create Reports", "Communication "],
     description: "Coursework in structured data synthesis, analytical reporting, technical documentation standards, and stakeholder communication.",
     featured: false
