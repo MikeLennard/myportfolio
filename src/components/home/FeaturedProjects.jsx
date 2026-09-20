@@ -1,10 +1,6 @@
 import { Link } from 'react-router-dom';
 import ProjectCard from '../projects/ProjectCard';
 
-/**
- * FeaturedProjects Component
- * Styled with custom palette (#9CB080, #618764, #2B5748, #273338)
- */
 export default function FeaturedProjects({ projects = [], onSelectProject }) {
   const featured = projects.filter((p) => p.featured).slice(0, 3);
 

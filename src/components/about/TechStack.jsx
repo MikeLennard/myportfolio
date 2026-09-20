@@ -1,27 +1,20 @@
-// - useMemo: optimizes performance by caching the combined, deduplicated skills list
 import { useState, useMemo } from 'react';
 import TechIcon from '../common/TechIcon';
 
-/**
- * Purpose:
- * - Displays an interactive, categorized catalog of technical skills and tools.
- * - Allows visitors to filter skills by 'All', 'Frontend', or 'Backend & DB'.
- */
 export default function TechStack({ skills = {} }) {
   const [activeCategory, setActiveCategory] = useState('all');
 
-  // Defines the available filter tabs displayed at the top of the card
   const categories = [
     { key: 'all', name: 'All' },
     { key: 'frontend', name: 'Frontend' },
     { key: 'backend', name: 'Backend & DB' }
   ];
-  // Gathers skills from all categories and removes any duplicates.
+
   const allSkills = useMemo(() => {
     const list = Object.values(skills).flat()
     const seen = new Set();
 
-    // 3. Filter list so each skill appears only once
+    // Filter list so each skill appears only once
     return list.filter((item) => {
       if (!item?.name) return false;
       const lower = item.name.toLowerCase();
@@ -31,7 +24,6 @@ export default function TechStack({ skills = {} }) {
     });
   }, [skills]);
 
-  // Determines which skills array to display based on the active tab:
   const currentSkills = activeCategory === 'all'
     ? (skills.all || allSkills)
     : (skills[activeCategory] || []);
@@ -53,8 +45,8 @@ export default function TechStack({ skills = {} }) {
               type="button"
               onClick={() => setActiveCategory(cat.key)}
               className={`px-3 py-1.5 rounded-lg text-xs font-semibold transition-all cursor-pointer ${activeCategory === cat.key
-                  ? 'bg-[#2B5748] text-[#9CB080] border border-[#9CB080]/40 shadow-md'
-                  : 'text-[#CBD5C0] hover:text-white'
+                ? 'bg-[#2B5748] text-[#9CB080] border border-[#9CB080]/40 shadow-md'
+                : 'text-[#CBD5C0] hover:text-white'
                 }`}
             >
               {cat.name}

@@ -1,10 +1,6 @@
 import { Link } from 'react-router-dom';
 import { personalInfo } from '../../data/portfolioData';
 
-/**
- * Footer Component
- * Styled with custom palette (#9CB080, #618764, #2B5748, #273338)
- */
 export default function Footer() {
   const currentYear = new Date().getFullYear();
 

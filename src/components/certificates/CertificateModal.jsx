@@ -2,11 +2,6 @@ import { useState, useEffect } from 'react';
 import Modal from '../common/Modal';
 import TechIcon from '../common/TechIcon';
 
-/**
- * CertificateModal Component
- * Shows full verification details, large preview image gallery, issuer, and validation link.
- * Styled with custom palette (#9CB080, #618764, #2B5748, #273338).
- */
 export default function CertificateModal({ certificate, onClose }) {
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
   const [prevCertId, setPrevCertId] = useState(certificate?.id);
@@ -111,11 +106,10 @@ export default function CertificateModal({ certificate, onClose }) {
                   key={idx}
                   type="button"
                   onClick={() => setCurrentImageIndex(idx)}
-                  className={`relative w-16 h-12 rounded-lg overflow-hidden shrink-0 border-2 transition-all cursor-pointer bg-[#273338] ${
-                    idx === currentImageIndex
+                  className={`relative w-16 h-12 rounded-lg overflow-hidden shrink-0 border-2 transition-all cursor-pointer bg-[#273338] ${idx === currentImageIndex
                       ? 'border-[#9CB080] ring-2 ring-[#9CB080]/40 scale-105'
                       : 'border-[#2B5748] opacity-60 hover:opacity-100'
-                  }`}
+                    }`}
                   aria-label={`Select certificate ${idx + 1}`}
                 >
                   <img

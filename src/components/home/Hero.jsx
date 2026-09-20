@@ -1,27 +1,18 @@
 import { Link } from 'react-router-dom';
 import { personalInfo } from '../../data/portfolioData';
 
-/**
- * Hero Component
- * Demonstrates:
- * - Functional Component
- * - Props / Data Integration
- * - Event Handling (`onClick`)
- * - Circular Profile Picture with User Custom Palette (#9CB080, #618764, #2B5748, #273338)
- */
 export default function Hero() {
   return (
     <section className="relative py-12 lg:py-20 overflow-hidden">
       <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
-        {/* Left Column: Introductions & CTAs */}
+
         <div className="lg:col-span-7 space-y-6 text-center lg:text-left">
-          {/* Status Badge */}
+
           <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[#2B5748]/70 border border-[#9CB080]/40 text-xs font-semibold text-[#9CB080] backdrop-blur-md">
             <span className="w-2 h-2 rounded-full bg-[#9CB080] pulse-dot"></span>
             <span>Available for New Projects & Internships</span>
           </div>
 
-          {/* Heading */}
           <h1 className="text-4xl sm:text-6xl font-extrabold text-white tracking-tight leading-[1.15]">
             Hi, I'm <span className="gradient-text">{personalInfo.name}</span>
             <br />
@@ -30,12 +21,10 @@ export default function Hero() {
             </span>
           </h1>
 
-          {/* Subtitle */}
           <p className="text-[#CBD5C0] text-base sm:text-lg max-w-2xl leading-relaxed">
             {personalInfo.tagline}
           </p>
 
-          {/* CTA Buttons */}
           <div className="flex flex-wrap items-center justify-center lg:justify-start gap-4 pt-2">
             <Link
               to="/projects"
@@ -57,15 +46,12 @@ export default function Hero() {
           </div>
         </div>
 
-        {/* Right Column: Circular Profile Picture with Custom Palette Glowing Ring */}
         <div className="lg:col-span-5 flex justify-center items-center">
           <div className="relative group">
-            {/* Ambient Background Glow with #618764 and #9CB080 */}
             <div className="absolute -inset-4 bg-gradient-to-r from-[#2B5748] via-[#618764] to-[#9CB080] rounded-full blur-2xl opacity-50 group-hover:opacity-75 transition duration-700"></div>
 
-            {/* Glowing Gradient Ring Border */}
             <div className="relative p-2 rounded-full bg-gradient-to-tr from-[#2B5748] via-[#618764] to-[#9CB080] shadow-2xl shadow-[#2B5748]/40 animate-float">
-              {/* Circular Inner Frame */}
+
               <div className="w-64 h-64 sm:w-80 sm:h-80 rounded-full overflow-hidden border-4 border-[#273338] bg-[#273338] shadow-inner">
                 <img
                   src={personalInfo.avatar}

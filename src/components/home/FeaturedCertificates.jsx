@@ -1,11 +1,6 @@
 import { Link } from 'react-router-dom';
 import CertificateCard from '../certificates/CertificateCard';
 
-/**
- * FeaturedCertificates Component
- * Highlights verified certifications on the landing page with a direct link to full credentials.
- * Styled with custom palette (#9CB080, #618764, #2B5748, #273338).
- */
 export default function FeaturedCertificates({ certificates = [], onSelectCertificate }) {
   const featured = certificates.filter((c) => c.featured).slice(0, 3);
 

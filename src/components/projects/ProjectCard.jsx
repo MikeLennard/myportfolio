@@ -1,10 +1,5 @@
 import TechIcon from '../common/TechIcon';
 
-/**
- * ProjectCard Component
- * Simplified layout: image, title with view details, and technologies used
- * Styled with custom palette (#9CB080, #618764, #2B5748, #273338)
- */
 export default function ProjectCard({ project, onSelectProject }) {
   const { title, year, image, images, tags = [] } = project;
 

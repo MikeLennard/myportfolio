@@ -2,15 +2,6 @@ import { useState } from 'react';
 import { Link } from 'react-router-dom';
 import NavItem from './NavItem';
 
-/**
- * NavContainer Component
- * Demonstrates:
- * - Functional Component
- * - Props (`items`, `currentPath`)
- * - State (`isMenuOpen`)
- * - Event Handling (`onClick` toggle, close)
- * - Styled with User Custom Palette (#9CB080, #618764, #2B5748, #273338)
- */
 const NavContainer = ({ items = [] }) => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 

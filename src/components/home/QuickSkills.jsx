@@ -1,10 +1,6 @@
 import { useState, useMemo } from 'react';
 import TechIcon from '../common/TechIcon';
 
-/**
- * QuickSkills Component
- * Styled with custom palette (#9CB080, #618764, #2B5748, #273338)
- */
 export default function QuickSkills({ skills = {} }) {
   const [activeTab, setActiveTab] = useState('all');
 
@@ -26,8 +22,8 @@ export default function QuickSkills({ skills = {} }) {
     });
   }, [skills]);
 
-  const currentSkills = activeTab === 'all' 
-    ? (skills.all || allSkills) 
+  const currentSkills = activeTab === 'all'
+    ? (skills.all || allSkills)
     : (skills[activeTab] || []);
 
   return (
