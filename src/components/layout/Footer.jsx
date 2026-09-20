@@ -21,7 +21,7 @@ export default function Footer() {
               <span className="font-bold text-white text-lg tracking-wide">{personalInfo.name}</span>
             </div>
             <p className="text-sm text-[#CBD5C0] max-w-md leading-relaxed">
-              {personalInfo.tagline} Built using React JS, custom CSS animations, and modern UI components.
+              {personalInfo.tagline} Built using Laravel, custom CSS animations, and modern UI components.
             </p>
             <div className="flex items-center gap-2 text-xs text-[#9CB080] font-medium">
               <span className="w-2 h-2 rounded-full bg-[#9CB080] pulse-dot"></span>

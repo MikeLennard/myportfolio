@@ -32,7 +32,7 @@ export default function Hero() {
 
           {/* Subtitle */}
           <p className="text-[#CBD5C0] text-base sm:text-lg max-w-2xl leading-relaxed">
-            {personalInfo.tagline} {personalInfo.bio}
+            {personalInfo.tagline}
           </p>
 
           {/* CTA Buttons */}

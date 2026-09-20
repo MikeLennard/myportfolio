@@ -1,8 +1,7 @@
 export const personalInfo = {
   name: "Mike Lennard Dela Cruz",
   title: "BSIT Developer & Multimedia Specialist",
-  tagline: "Developing web systems, mobile applications with Flutter/Dart, and crafting dynamic multimedia content.",
-  bio: "I am a BSIT student at Central Luzon State University and a consistent University Scholar. I build practical, high-performance web and mobile systems—including an ongoing Capstone project for Indigenous People in Nueva Ecija—and serve as Head Video Editor for the CLSU BSIT Multimedia Team.",
+  tagline: "I’m a University Scholar studying IT at Central Luzon State University, dedicated to building web applications that solve real-world problems.",
   location: "Science City of Muñoz, Nueva Ecija, Philippines",
   email: "lennarddelacruz27@gmail.com",
   avatar: "/profile.jpg",
@@ -27,8 +26,8 @@ export const projectsData = [
     title: "Enhanced Web-Based Record Management System for Indigenous People in Nueva Ecija",
     category: "Capstone",
     year: "2026 (Ongoing)",
-    shortDesc: "Comprehensive web-based record management system tailored for indigenous communities in Nueva Ecija, ensuring organized, secure, and accessible documentation.",
-    fullDesc: "An ongoing capstone development project designed to streamline and digitize demographic, genealogical, and administrative records for Indigenous Peoples in Nueva Ecija. Features role-based access control, secure record archiving, intuitive querying, and customized community administration tools.",
+    shortDesc: "A secure web system to store, organize, and protect official records for indigenous communities in Nueva Ecija.",
+    fullDesc: "My ongoing college capstone project built to help indigenous communities manage their records online. It replaces manual paperwork with a secure web system where admins can register members, manage family records, search community data quickly, and control who can view sensitive information.",
     images: [
       "/projects/ncip1.png",
       "/projects/ncip2.png",
@@ -41,9 +40,9 @@ export const projectsData = [
     github: "https://github.com/MikeLennard",
     demo: null,
     highlights: [
-      "Digitizes and protects indigenous community records",
-      "Role-based access permissions & confidential data handling",
-      "Ongoing university capstone research and development"
+      "Easy search and digital storage for community records",
+      "Role-based accounts to keep private data secure",
+      "Ongoing university capstone project at CLSU"
     ]
   },
   {
@@ -51,8 +50,8 @@ export const projectsData = [
     title: "NBL Apparel - E-Commerce Platform",
     year: "2026",
     role: "Group Project Developer",
-    shortDesc: "E-commerce web platform for apparel brand NBL featuring interactive clothing catalogs, product filtering, and shopping cart flow.",
-    fullDesc: "Contributed as a Group Project Developer in 2026 to build NBL Apparel, a responsive e-commerce web platform. Implemented product showcases, dynamic apparel categorization, responsive cart state, and a modern customer shopping experience.",
+    shortDesc: "An online clothing shop where users can browse apparel, filter products, and place orders.",
+    fullDesc: "A group web project built for a clothing brand. Customers can view apparel collections, filter items by category, add clothes to their cart, and see their order summary on a clean, mobile-friendly website.",
     images: [
       "/projects/nbl1.png",
       "/projects/nbl2.png",
@@ -65,9 +64,9 @@ export const projectsData = [
     github: "https://github.com/MikeLennard",
     demo: null,
     highlights: [
-      "Dynamic apparel catalog with multi-category filters",
-      "Responsive cart state management and checkout simulation",
-      "Collaborative 2026 group project development"
+      "Browse clothing with quick category filters",
+      "Add-to-cart and order summary checkout flow",
+      "Clean and responsive design built with Bootstrap"
     ]
   },
   {
@@ -75,8 +74,8 @@ export const projectsData = [
     title: "Patient Management System",
     year: "2025",
     role: "Group Project Developer",
-    shortDesc: "Healthcare record management system for patient intake, medical history tracking, and clinical appointment management.",
-    fullDesc: "Collaborated as a Group Project Developer in 2025 on a web-based Patient Management System. Built database-backed records handling for patient demographics, outpatient visits, clinical logs, and appointment scheduling.",
+    shortDesc: "A web app for clinics to manage patient records, doctor appointments, and checkup history.",
+    fullDesc: "A web-based system built to help clinic staff track patient visits and medical logs digitally. Doctors and staff can register new patients, schedule checkup appointments, save medical notes, and find past records in seconds.",
     images: [
       "/projects/pms1.png",
       "/projects/pms2.png",
@@ -89,9 +88,9 @@ export const projectsData = [
     github: "https://github.com/MikeLennard",
     demo: null,
     highlights: [
-      "Centralized patient medical records and intake management",
-      "Secure clinical database structure with relational tables",
-      "Appointment logging, prescription tracking, and query filters"
+      "Digital patient registration and medical records",
+      "Appointment scheduling and clinic visit tracking",
+      "Fast search to find patient files instantly"
     ]
   },
   {
@@ -99,8 +98,8 @@ export const projectsData = [
     title: "ITour - Tourist Spots Booking Application",
     year: "2025",
     role: "Group Project Developer",
-    shortDesc: "Cross-platform mobile booking app for discovering and reserving tourist destinations and attractions built with Flutter.",
-    fullDesc: "Contributed as a Group Project Developer in 2025 using the Flutter framework. Engineered mobile screens, destination spot catalogs, reservation logic, and interactive traveler workflows to facilitate tourism discovery and local spot bookings.",
+    shortDesc: "A mobile app built with Flutter to explore popular tourist spots and book trips easily.",
+    fullDesc: "A mobile app developed with Flutter and Dart to help people find and visit local tourist destinations. Users can explore travel spots, read details, view photos, and book their visits directly from their phones.",
     images: [
       "/projects/Itour1.png",
       "/projects/Itour2.png",
@@ -112,9 +111,9 @@ export const projectsData = [
     github: "https://github.com/MikeLennard",
     demo: null,
     highlights: [
-      "Cross-platform mobile app built with Flutter and Dart",
-      "Tourist destination exploration and reservation flow",
-      "Interactive mobile UI components and responsive layout"
+      "Explore local tourist attractions with photos and guides",
+      "Simple booking and trip reservation flow",
+      "Smooth mobile user experience built with Flutter"
     ]
   },
   {
@@ -122,8 +121,8 @@ export const projectsData = [
     title: "Library Management System",
     year: "2025",
     role: "Group Project Developer",
-    shortDesc: "Academic library system for book cataloging, circulation tracking, borrow/return logs, and member management.",
-    fullDesc: "Contributed as a Group Project Developer in 2025 to create a robust Library Management System. Included book search & inventory tracking, borrowing/return automation, overdue fine calculations, and member registry.",
+    shortDesc: "A web-based library system to track book inventory, student borrowing, and return dates.",
+    fullDesc: "A library management system built with PHP and MySQL for schools. It lets librarians add and organize books, manage student library accounts, record borrowed and returned books, and track overdue fines.",
     image: "/projects/library1.png",
     images: [
       "/projects/library1.png",
@@ -135,9 +134,9 @@ export const projectsData = [
     github: "https://github.com/MikeLennard",
     demo: null,
     highlights: [
-      "Automated borrowing and return workflows with overdue alerts",
-      "Book catalog search with ISBN and category indexing",
-      "Student membership registry and circulation logs"
+      "Track book inventory and who borrowed each book",
+      "Search books easily by title, author, or category",
+      "Dashboard showing total books and active borrowed items"
     ]
   }
 ];
