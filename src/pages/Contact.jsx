@@ -3,15 +3,6 @@ import ContactInfo from '../components/contact/ContactInfo';
 import Badge from '../components/common/Badge';
 import { personalInfo } from '../data/portfolioData';
 
-/**
- * Contact Page Component
- * Demonstrates:
- * - Functional Component
- * - Props support (`props.class`)
- * - State Management (in child ContactForm & ContactInfo)
- * - Event Handling (form submission, input changes, clipboard copy)
- * - Tailwind + Custom CSS
- */
 const Contact = (props) => {
   return (
     <div className={`max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 animate-fadeIn ${props.class || ''}`}>

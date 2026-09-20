@@ -2,10 +2,6 @@ import { useState, useEffect } from 'react';
 import Modal from '../common/Modal';
 import Badge from '../common/Badge';
 
-/**
- * ProjectModal Component
- * Styled with custom palette (#9CB080, #618764, #2B5748, #273338)
- */
 export default function ProjectModal({ project, onClose }) {
   const [activeIdx, setActiveIdx] = useState(0);
   const [prevProjectId, setPrevProjectId] = useState(project?.id);
@@ -132,11 +128,10 @@ export default function ProjectModal({ project, onClose }) {
                     type="button"
                     onClick={() => setActiveIdx(idx)}
                     aria-label={`View photo ${idx + 1}`}
-                    className={`relative w-20 h-14 rounded-lg overflow-hidden flex-shrink-0 border-2 transition-all cursor-pointer bg-[#273338] ${
-                      isActive
-                        ? 'border-[#9CB080] ring-2 ring-[#9CB080]/50 scale-100 opacity-100 shadow-md'
-                        : 'border-[#2B5748] opacity-60 hover:opacity-90 hover:border-[#618764]'
-                    }`}
+                    className={`relative w-20 h-14 rounded-lg overflow-hidden flex-shrink-0 border-2 transition-all cursor-pointer bg-[#273338] ${isActive
+                      ? 'border-[#9CB080] ring-2 ring-[#9CB080]/50 scale-100 opacity-100 shadow-md'
+                      : 'border-[#2B5748] opacity-60 hover:opacity-90 hover:border-[#618764]'
+                      }`}
                   >
                     <img
                       src={img}
@@ -150,7 +145,7 @@ export default function ProjectModal({ project, onClose }) {
           )}
         </div>
 
-        {/* Project Meta Details */}
+        {/* Project Details */}
         {(year || project?.role) && (
           <div className="flex flex-wrap items-center gap-2.5 pb-2 border-b border-[#2B5748]/60">
             {year && (

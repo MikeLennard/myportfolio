@@ -1,4 +1,5 @@
-import { Routes, Route } from 'react-router-dom';
+import { useEffect } from 'react';
+import { Routes, Route, useLocation } from 'react-router-dom';
 import Home from './pages/Home';
 import About from './pages/About';
 import Contact from './pages/Contact';
@@ -9,15 +10,16 @@ import Footer from './components/layout/Footer';
 import theme from './Theme.module.css';
 import './App.css';
 
-/**
- * App Root Component
- * Demonstrates:
- * - Functional Component Architecture
- * - React Router v7 Routing (Home, Projects, About, CV / Resume, Contact)
- * - Passing Props to child components (items to NavContainer, class to pages)
- * - Mixing CSS Modules (theme), Custom CSS (App.css), and Tailwind CSS
- */
 function App() {
+  const { pathname, hash } = useLocation();
+
+  // Scroll to top whenever navigation route changes
+  useEffect(() => {
+    if (!hash) {
+      window.scrollTo(0, 0);
+    }
+  }, [pathname, hash]);
+
   const navItems = [
     { id: 1, href: '/', name: 'Home' },
     { id: 2, href: '/projects', name: 'Projects' },

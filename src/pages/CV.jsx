@@ -1,17 +1,6 @@
 import { Link } from 'react-router-dom';
 import { personalInfo } from '../data/portfolioData';
 
-/**
- * Harvard-Format Resume Page Component
- * Modeled after the Harvard FAS Office of Career Services Resume Standard.
- * Features:
- * - Authentic serif typography (Georgia / Times New Roman)
- * - Centered header with clean bullet-delimited contact info
- * - Uppercase section titles with horizontal divider rules
- * - Two-column justified institution/role and location/dates
- * - Action-verb driven bulleted achievements
- * - One-click Print-to-PDF (`window.print()`) with print stylesheet
- */
 const CV = () => {
   const handlePrint = () => {
     window.print();
@@ -49,7 +38,7 @@ const CV = () => {
 
       </div>
 
-      {/* Realistic Harvard Paper Sheet Container */}
+      {/* Paper Sheet Container */}
       <div className="flex justify-center">
         <div
           id="harvard-resume-document"

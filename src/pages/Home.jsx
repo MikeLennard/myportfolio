@@ -7,15 +7,6 @@ import ProjectModal from '../components/projects/ProjectModal';
 import CertificateModal from '../components/certificates/CertificateModal';
 import { projectsData, skillsData, certificatesData } from '../data/portfolioData';
 
-/**
- * Home / Dashboard Page Component
- * Demonstrates:
- * - Functional Component
- * - Props support (`props.class`)
- * - State Management (`selectedProject`, `selectedCertificate`)
- * - Event Handling (modal controls, exploration)
- * - Rich Custom UI + Tailwind
- */
 const Home = (props) => {
   const [selectedProject, setSelectedProject] = useState(null);
   const [selectedCertificate, setSelectedCertificate] = useState(null);

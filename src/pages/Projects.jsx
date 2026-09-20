@@ -2,15 +2,6 @@ import { useState } from 'react';
 import { projectsData } from '../data/portfolioData';
 import ProjectCard from '../components/projects/ProjectCard';
 import ProjectModal from '../components/projects/ProjectModal';
-
-/**
- * Projects Page Component
- * Demonstrates:
- * - Functional Component
- * - State Management (`selectedProject`)
- * - Event Handling (modal preview)
- * - Props Passing to Child Components
- */
 export default function Projects() {
   const [selectedProject, setSelectedProject] = useState(null);
 
