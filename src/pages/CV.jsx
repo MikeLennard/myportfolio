@@ -64,7 +64,7 @@ const CV = () => {
           {/* ========================================================= */}
           {/* HEADER (Centered) */}
           {/* ========================================================= */}
-          <header className="text-center pb-2">
+          <div className="resume-header text-center pb-2">
             <h1 className="text-2xl sm:text-[26px] font-bold tracking-normal uppercase text-black mb-1.5">
               {personalInfo.name}
             </h1>
@@ -97,7 +97,7 @@ const CV = () => {
                 GitHub
               </a>
             </p>
-          </header>
+          </div>
 
           {/* ========================================================= */}
           {/* SECTION: EDUCATION */}

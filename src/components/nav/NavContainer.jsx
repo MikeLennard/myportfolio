@@ -14,7 +14,7 @@ const NavContainer = ({ items = [] }) => {
   };
 
   return (
-    <header className="sticky top-0 z-50 w-full backdrop-blur-xl bg-[#273338]/85 border-b border-[#2B5748]/80 transition-all">
+    <header className="no-print sticky top-0 z-50 w-full backdrop-blur-xl bg-[#273338]/85 border-b border-[#2B5748]/80 transition-all">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex h-18 items-center justify-between">
           {/* Brand Logo */}
