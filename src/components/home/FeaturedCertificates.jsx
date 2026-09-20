@@ -14,7 +14,7 @@ export default function FeaturedCertificates({ certificates = [], onSelectCertif
       <div className="flex flex-col md:flex-row md:items-end justify-between mb-10 gap-4">
         <div>
           <span className="text-xs font-semibold uppercase tracking-wider text-[#9CB080]">Accreditations</span>
-          <h2 className="text-3xl font-extrabold text-white mt-1">Verified Certifications</h2>
+          <h2 className="text-3xl font-extrabold text-white mt-1">Licenses & Certifications</h2>
         </div>
 
         <Link

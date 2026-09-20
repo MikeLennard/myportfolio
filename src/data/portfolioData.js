@@ -13,13 +13,6 @@ export const personalInfo = {
   }
 };
 
-export const dashboardStats = [
-  { id: 1, label: "Academic & Capstone Projects", value: "5+", description: "Web platforms & database systems", icon: "🚀" },
-  { id: 2, label: "Academic Standing", value: "Scholar", description: "Consistent College - University Scholar", icon: "🎓" },
-  { id: 3, label: "Specialization", value: "Web Dev", description: "Full-stack & database architecture", icon: "💻" },
-  { id: 4, label: "Technology Breadth", value: "Multi-Stack", description: "PHP, Laravel, React, MySQL", icon: "⚡" }
-];
-
 export const projectsData = [
   {
     id: "proj-capstone",
@@ -71,7 +64,7 @@ export const projectsData = [
   },
   {
     id: "proj-patient",
-    title: "Patient Management System",
+    title: "Clinical Management System",
     year: "2025",
     role: "Group Project Developer",
     shortDesc: "A web app for clinics to manage patient records, doctor appointments, and checkup history.",
@@ -186,9 +179,9 @@ export const educationAndTimeline = [
     id: "t-clsu",
     year: "Aug 2023 - Present",
     sortOrder: 2023.8,
-    role: "Bachelor of Science in Information Technology (Computer Programming)",
+    role: "Bachelor of Science in Information Technology (Major in System Development)",
     institution: "Central Luzon State University (CLSU)",
-    description: "Consistent College Scholar - University Scholar. Major coursework in programming, systems analysis, database management, and web engineering. Actively developing the Capstone project.",
+    description: "Consistent University Scholar. Major coursework in programming, systems development, database management. Actively developing the Capstone project.",
     type: "education"
   },
   {
@@ -238,36 +231,59 @@ export const certificatesData = [
     issuer: "Central Luzon State University",
     issuerLogo: "clsu",
     issueDate: "2023 - Present",
-    credentialId: "CLSU-SCHOLAR-BSIT",
-    verifyUrl: "https://clsu.edu.ph",
-    image: "https://images.unsplash.com/photo-1523240795612-9a054b0db644?auto=format&fit=crop&w=800&q=80",
-    skills: ["Software Engineering", "Database Management System (DBMS)", "Web Development"],
-    description: "Awarded by Central Luzon State University for consistent scholastic distinction, maintaining top-tier academic honors semester after semester in the BS Information Technology curriculum.",
+    image: "/certificates/scholar1.png",
+    images: [
+      "/certificates/scholar1.png",
+      "/certificates/scholar2.png",
+      "/certificates/scholar3.png",
+      "/certificates/scholar4.png",
+      "/certificates/scholar5.png"
+    ],
+    skills: ["Software Development", "Web Development"],
+    description: "Awarded by Central Luzon State University for consistent scholastic distinction, maintaining academic honors every semester in the BS Information Technology curriculum.",
+    featured: true
+  },
+  {
+    id: "cert-ircite",
+    title: "IRCITE 2nd Runner Up Video Editing",
+    issuer: "PSITE (Philippine Society of Information Technology Educators)",
+    issuerLogo: "psite",
+    issueDate: "Apr 2025",
+    images: [
+      "/certificates/irciteve2.png",
+      "/certificates/irciteve1.png",
+      "/certificates/irciteve4.png",
+      "/certificates/irciteve3.png",
+      "/certificates/irciteanimation1.png"
+    ],
+    skills: ["Video Editing", "Animation"],
+    description: "Certificate of Participation and competitive multimedia presentation in video editing at the Regional Conference in Information Technology Education (IRCITE 2026).",
     featured: true
   },
   {
     id: "cert-css-ncii",
     title: "Computer Systems Servicing NC II",
-    issuer: "TESDA: Technical Education and Skills Development Authority",
+    issuer: "TESDA",
     issuerLogo: "tesda",
     issueDate: "2023",
-    credentialId: "TESDA-CSS-NCII-PH",
-    verifyUrl: "https://www.tesda.gov.ph",
-    image: "https://images.unsplash.com/photo-1558494949-ef010cbdcc31?auto=format&fit=crop&w=800&q=80",
-    skills: ["Network Administration", "Windows System Administration", "Computer Networking"],
+    image: "/certificates/NC2.png",
+    skills: ["Network Administration", "Computer Network"],
     description: "National Certificate II validating technical competency in computer hardware assembly, OS installation and configuration, setup of computer networks and servers, and maintenance and repair of computer systems.",
     featured: true
   },
   {
     id: "cert-webdev-dict",
     title: "Web Development",
-    issuer: "Department of Information and Communications Technology - Philippines (DICT)",
+    issuer: "DICT",
     issuerLogo: "dict",
-    issueDate: "Nov 2024",
-    credentialId: "DICT-WD-2024-NOV",
-    verifyUrl: "https://dict.gov.ph",
-    image: "https://images.unsplash.com/photo-1547658719-da2b51169166?auto=format&fit=crop&w=800&q=80",
-    skills: ["Web Development", "WordPress Design", "HTML", "Cascading Style Sheets (CSS)", "JavaScript"],
+    issueDate: "Mar 2026",
+    images: [
+      "/certificates/web4.png",
+      "/certificates/web3.png",
+      "/certificates/web2.png",
+      "/certificates/web1.png"
+    ],
+    skills: ["HTML", "CSS", "JavaScript"],
     description: "Government-accredited ICT training series covering WebDev via Cloud (WD008), Basic JavaScript for WebDev (WD003), and Designing a Web Page using HTML and CSS (WD002).",
     featured: true
   },
@@ -277,12 +293,13 @@ export const certificatesData = [
     issuer: "Coursera",
     issuerLogo: "coursera",
     issueDate: "Mar 2026",
-    credentialId: "COURSERA-DATAVIZ-BOKEH-PLOTLY",
-    verifyUrl: "https://www.coursera.org",
-    image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=800&q=80",
-    skills: ["Data Scalability and Analytics", "Python (Programming Language)"],
+    images: [
+      "/certificates/datavisualization1.png",
+      "/certificates/datavisualization2.png"
+    ],
+    skills: ["Data Scalability and Analytics", "Python"],
     description: "Hands-on data visualization specialization focused on building interactive web-based charts, exploratory dashboards, and statistical plots with Python Bokeh and Plotly.",
-    featured: true
+    featured: false
   },
   {
     id: "cert-packet-tracer",
@@ -290,10 +307,11 @@ export const certificatesData = [
     issuer: "Cisco",
     issuerLogo: "cisco",
     issueDate: "Feb 2025",
-    credentialId: "CISCO-PACKET-TRACER-2025",
-    verifyUrl: "https://www.netacad.com",
-    image: "https://images.unsplash.com/photo-1544197150-b99a580bb7a8?auto=format&fit=crop&w=800&q=80",
-    skills: ["Packet Tracer", "Computer Networking", "Network Administration"],
+    images: [
+      "/certificates/packettracer1.png",
+      "/certificates/packettracer2.png"
+    ],
+    skills: ["Packet Tracer", "Network Administration"],
     description: "Explored advanced network topology design, simulation of enterprise LAN/WAN environments, routing tables, and real-time packet flow verification using Cisco Packet Tracer.",
     featured: true
   },
@@ -303,10 +321,8 @@ export const certificatesData = [
     issuer: "Cisco",
     issuerLogo: "cisco",
     issueDate: "Mar 2026",
-    credentialId: "CISCO-IT-SEC-CONNECT-2026",
-    verifyUrl: "https://www.netacad.com",
-    image: "https://images.unsplash.com/photo-1563986768609-322da13575f3?auto=format&fit=crop&w=800&q=80",
-    skills: ["Network Administration", "Windows System Administration", "Computer Networking"],
+    image: "/certificates/ITSupport.png",
+    skills: ["Network Administration", "Computer Networking"],
     description: "Validation in enterprise security fundamentals, secure remote workstation connectivity, firewall policies, endpoint hardening, and network troubleshooting.",
     featured: false
   },
@@ -316,37 +332,23 @@ export const certificatesData = [
     issuer: "Cisco",
     issuerLogo: "cisco",
     issueDate: "Feb 2026",
-    credentialId: "CISCO-IT-SUPPORT-CREDELY-2026",
-    verifyUrl: "https://www.credly.com",
-    image: "https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d?auto=format&fit=crop&w=800&q=80",
-    skills: ["Windows System Administration", "Computer Networking"],
+    images: [
+      "/certificates/basics1.png",
+      "/certificates/basics2.png"
+    ],
+    skills: ["Network Administration", "Computer Networking"],
     description: "Industry-aligned validation verified via Credly covering core IT support methodologies, customer issue ticketing, triage workflows, and operating system diagnostics.",
     featured: false
   },
   {
     id: "cert-wordpress-dict",
     title: "Wordpress",
-    issuer: "Department of Information and Communications Technology - Philippines (DICT)",
+    issuer: "DICT",
     issuerLogo: "dict",
     issueDate: "Jun 2024",
-    credentialId: "DICT-WP-ESSENTIALS-2024",
-    verifyUrl: "https://dict.gov.ph",
-    image: "https://images.unsplash.com/photo-1507238691740-187a5b1d37b8?auto=format&fit=crop&w=800&q=80",
-    skills: ["WordPress Design", "Web Development", "PHP", "MySQL"],
+    image: "/certificates/wordpress.png",
+    skills: ["WordPress Design", "Web Development"],
     description: "Wordpress Essentials training covering installation, cloud hosting deployment, custom theme styling, plugin ecosystem, and web content administration.",
-    featured: false
-  },
-  {
-    id: "cert-ircite",
-    title: "IRCITE 2026 - Certificate of Participation in Short Animation",
-    issuer: "Philippine Society of Information Technology Education (PSITE)",
-    issuerLogo: "psite",
-    issueDate: "Mar 2026",
-    credentialId: "IRCITE-2026-ANIMATION",
-    verifyUrl: "https://psite.org",
-    image: "https://images.unsplash.com/photo-1574717024653-61fd2cf4d44d?auto=format&fit=crop&w=800&q=80",
-    skills: ["Adobe Photoshop", "Software Engineering"],
-    description: "Certificate of Participation and competitive multimedia presentation in short animation at the Regional Conference in Information Technology Education (IRCITE 2026).",
     featured: false
   },
   {
@@ -355,10 +357,8 @@ export const certificatesData = [
     issuer: "Cisco",
     issuerLogo: "cisco",
     issueDate: "2025",
-    credentialId: "CISCO-REPORTING-2025",
-    verifyUrl: "https://www.netacad.com",
-    image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=800&q=80",
-    skills: ["Data Scalability and Analytics", "Software Engineering"],
+    image: "/certificates/reports.png",
+    skills: ["Create Reports", "Communication "],
     description: "Coursework in structured data synthesis, analytical reporting, technical documentation standards, and stakeholder communication.",
     featured: false
   }

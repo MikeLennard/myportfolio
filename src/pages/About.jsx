@@ -32,53 +32,56 @@ const About = (props) => {
         <h1 className="text-3xl sm:text-5xl font-extrabold text-white tracking-tight">
           About <span className="gradient-text">Me</span>
         </h1>
+        <p className="text-sm sm:text-base text-[#9CB080] mt-2 font-medium">
+          A glimpse into my journey, passion for web development, and drive to learn
+        </p>
       </div>
 
       {/* About Me Card with Photo */}
-      <div className="bg-[#273338]/80 border border-[#9CB080]/20 rounded-2xl p-6 sm:p-8 mb-12 shadow-lg backdrop-blur-md">
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+      <div className="glass-panel p-6 sm:p-10 rounded-3xl mb-14 shadow-2xl border border-[#9CB080]/20">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center">
           {/* Photo Column */}
-          <div className="lg:col-span-4 flex flex-col items-center text-center">
-            <div className="relative group">
-              {/* Subtle Ambient Glow */}
-              <div className="absolute -inset-2 bg-gradient-to-tr from-[#2B5748] via-[#618764] to-[#9CB080] rounded-2xl blur-md opacity-40 group-hover:opacity-70 transition duration-500"></div>
-
-              {/* Image Frame */}
-              <div className="relative w-48 h-56 sm:w-60 sm:h-72 rounded-2xl overflow-hidden border-2 border-[#9CB080]/40 shadow-2xl bg-[#273338]">
-                <img
-                  src={personalInfo.avatar}
-                  alt={personalInfo.name}
-                  className="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-500"
-                />
-              </div>
-            </div>
-            <div className="mt-3">
-              <h3 className="text-base font-bold text-white">{personalInfo.name}</h3>
-              <p className="text-xs text-[#9CB080] font-medium">BSIT Student · Web Developer</p>
+          <div className="lg:col-span-4 flex justify-center">
+            <div className="w-48 h-56 sm:w-56 sm:h-68 rounded-2xl overflow-hidden border-2 border-[#9CB080]/35 shadow-2xl bg-[#273338] transition-all duration-300 hover:border-[#9CB080]/60">
+              <img
+                src={personalInfo.avatar}
+                alt={personalInfo.name}
+                className="w-full h-full object-cover object-center transition-transform duration-500 hover:scale-105"
+              />
             </div>
           </div>
 
           {/* Text Column */}
           <div className="lg:col-span-8 space-y-4">
-            <h2 className="text-2xl sm:text-3xl font-bold text-white tracking-tight">
-              Learning by Building, Eager to Grow
-            </h2>
+            <div>
+              <span className="text-xs uppercase tracking-widest font-semibold text-[#9CB080]">
+                Background & Goals
+              </span>
+              <h2 className="text-2xl sm:text-3xl font-extrabold text-white tracking-tight mt-1">
+                Learning by Building, Eager to Grow
+              </h2>
+            </div>
 
-            <p className="text-[#CBD5C0] text-sm sm:text-base leading-relaxed">
-              Hello! I'm <strong className="text-white font-semibold">{personalInfo.name}</strong>, an Information Technology student at Central Luzon State University. My focus is on <strong className="text-white font-semibold">Web Development</strong>, primarily building systems with <strong className="text-white font-semibold">PHP, Laravel, React, and MySQL</strong>.
+            <p className="text-[#E2EBE0] text-sm sm:text-base leading-relaxed">
+              Hello! I'm <strong className="text-white font-semibold">{personalInfo.name}</strong>, an Information Technology student at Central Luzon State University. My focus is on <strong className="text-white font-semibold">Web Development</strong>, building full-stack web applications with{' '}
+              <span className="inline-flex flex-wrap gap-1.5 align-middle my-0.5">
+                <span className="px-2 py-0.5 rounded-md bg-[#2B5748] text-[#9CB080] font-mono text-xs font-semibold border border-[#9CB080]/30">PHP</span>
+                <span className="px-2 py-0.5 rounded-md bg-[#2B5748] text-[#9CB080] font-mono text-xs font-semibold border border-[#9CB080]/30">Laravel</span>
+                <span className="px-2 py-0.5 rounded-md bg-[#2B5748] text-[#9CB080] font-mono text-xs font-semibold border border-[#9CB080]/30">React</span>
+                <span className="px-2 py-0.5 rounded-md bg-[#2B5748] text-[#9CB080] font-mono text-xs font-semibold border border-[#9CB080]/30">MySQL</span>
+              </span>.
             </p>
 
             <p className="text-[#CBD5C0] text-sm sm:text-base leading-relaxed">
-              I'm still learning and building my foundation through our <strong className="text-white font-semibold">school projects and my university capstone</strong>. Building these projects has taught me a lot about designing databases, writing structured code, and solving practical problems.
+              I'm still learning and building my foundation through our <strong className="text-white font-medium">school projects and my university capstone</strong>. Building these systems has taught me how to write cleaner code, design structured databases, and solve practical problems.
             </p>
 
             <p className="text-[#CBD5C0] text-sm sm:text-base leading-relaxed">
-              I'm always eager to learn more. I am actively looking for <strong className="text-[#9CB080] font-semibold">projects, collaborations, and opportunities</strong> that will challenge me, teach me new technologies, and help me grow as a developer.
+              I'm always eager to learn more. I am actively looking for <strong className="text-[#9CB080] font-medium">projects, collaborations, and opportunities</strong> that will challenge me, teach me new technologies, and help me grow as a developer.
             </p>
           </div>
         </div>
       </div>
-
 
       {/* Skills & Timeline Split Section */}
       <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
@@ -108,11 +111,11 @@ const About = (props) => {
             <span className="text-xs font-semibold uppercase tracking-wider text-[#9CB080]">Accreditations</span>
             <h2 className="text-3xl font-extrabold text-white mt-1">Licenses & Certifications</h2>
             <p className="text-[#CBD5C0] text-sm mt-1">
-              Verified credentials and national accreditations across Web Development, Networking, Cisco Systems, Data Analytics, and IT Support
+              National accreditations and credentials across Web Development, Networking, Cisco Systems, Data Analytics, and IT Support
             </p>
           </div>
           <span className="text-xs text-[#CBD5C0] bg-[#273338] px-3.5 py-1.5 rounded-xl border border-[#2B5748] self-start sm:self-auto font-medium">
-            {certificatesData.length} Verified Credentials
+            {certificatesData.length} Certificates
           </span>
         </div>
 

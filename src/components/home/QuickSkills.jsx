@@ -12,8 +12,7 @@ export default function QuickSkills({ skills = {} }) {
   const tabs = [
     { key: 'all', label: 'All' },
     { key: 'frontend', label: 'Frontend & Web' },
-    { key: 'backend', label: 'Backend & Core' },
-    { key: 'mobile', label: 'Mobile Dev' }
+    { key: 'backend', label: 'Backend & Core' }
   ];
 
   const allSkills = useMemo(() => {

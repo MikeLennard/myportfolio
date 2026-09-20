@@ -119,9 +119,7 @@ export default function ContactForm() {
         <p className="text-[#CBD5C0] text-sm max-w-md mx-auto">
           Thank you for reaching out! Your message was sent directly to <strong className="text-white">{personalInfo.email}</strong>.
           <br />
-          <span className="text-xs text-[#9CB080] block mt-2">
-            💡 Tip: If this is your first time testing the form, please check your Gmail (inbox or spam) to click the one-time "Activate Form" verification link from FormSubmit.
-          </span>
+
         </p>
         <div className="pt-4">
           <Button onClick={handleSendAnother} variant="secondary">
