@@ -43,7 +43,6 @@ export const projectsData = [
   {
     id: "proj-nbl",
     title: "NBL Apparel - E-Commerce Platform",
-    category: "Groupings",
     year: "2026",
     role: "Group Project Developer",
     shortDesc: "E-commerce web platform for apparel brand NBL featuring interactive clothing catalogs, product filtering, and shopping cart flow.",
@@ -62,7 +61,6 @@ export const projectsData = [
   {
     id: "proj-itour",
     title: "ITour - Tourist Spots Booking Application",
-    category: "Groupings",
     year: "2025",
     role: "Group Project Developer",
     shortDesc: "Cross-platform mobile booking app for discovering and reserving tourist destinations and attractions built with Flutter.",
@@ -81,7 +79,6 @@ export const projectsData = [
   {
     id: "proj-coffee",
     title: "Coffee Shop Ordering Application",
-    category: "Groupings",
     year: "2025",
     role: "Group Project Developer",
     shortDesc: "Mobile coffee shop ordering application built with Dart for customized drink orders, menu exploration, and price tallying.",
@@ -100,7 +97,6 @@ export const projectsData = [
   {
     id: "proj-patient",
     title: "Patient Management System",
-    category: "Groupings",
     year: "2025",
     role: "Group Project Developer",
     shortDesc: "Healthcare record management system for patient intake, medical history tracking, and clinical appointment management.",
@@ -119,13 +115,17 @@ export const projectsData = [
   {
     id: "proj-library",
     title: "Library Management System",
-    category: "Groupings",
     year: "2025",
     role: "Group Project Developer",
     shortDesc: "Academic library system for book cataloging, circulation tracking, borrow/return logs, and member management.",
     fullDesc: "Contributed as a Group Project Developer in 2025 to create a robust Library Management System. Included book search & inventory tracking, borrowing/return automation, overdue fine calculations, and member registry.",
-    image: "https://images.unsplash.com/photo-1521587760476-6c12a4b040da?auto=format&fit=crop&w=800&q=80",
-    tags: ["PHP", "Database Management", "System Architecture", "CRUD"],
+    image: "/projects/library1.png",
+    images: [
+      "/projects/library1.png",
+      "/projects/library2.png",
+      "/projects/library3.png"
+    ],
+    tags: ["PHP", "MySQL", "HTML", "CSS"],
     featured: false,
     github: "https://github.com/MikeLennard",
     demo: null,
@@ -391,19 +391,6 @@ export const certificatesData = [
     image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=800&q=80",
     skills: ["Data Scalability and Analytics", "Software Engineering"],
     description: "Coursework in structured data synthesis, analytical reporting, technical documentation standards, and stakeholder communication.",
-    featured: false
-  },
-  {
-    id: "cert-rotc",
-    title: "Certificate of Completion - Reserve Officer Training Corps (ROTC)",
-    issuer: "Army ROTC (Official Page)",
-    issuerLogo: "rotc",
-    issueDate: "May 2024",
-    credentialId: "AFP-ROTC-CLSU-2024",
-    verifyUrl: "https://army.mil.ph",
-    image: "https://images.unsplash.com/photo-1541872703-74c5e44368f9?auto=format&fit=crop&w=800&q=80",
-    skills: ["Software Engineering"],
-    description: "Completed military science and civic defense training, leadership development, emergency preparedness, and organizational coordination.",
     featured: false
   }
 ];

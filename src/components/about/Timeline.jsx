@@ -17,7 +17,7 @@ export default function Timeline({ items = [] }) {
   ];
 
   const filteredItems = items.filter((item) => {
-    if (filter === 'all') return true;
+    if (filter === 'all') return item.type !== 'video-editing';
     return item.type === filter;
   });
 
@@ -60,7 +60,7 @@ export default function Timeline({ items = [] }) {
         <div className="flex flex-wrap items-center gap-2">
           {filterTabs.map((tab) => {
             const count = tab.key === 'all' 
-              ? items.length 
+              ? items.filter((i) => i.type !== 'video-editing').length 
               : items.filter((i) => i.type === tab.key).length;
 
             return (
