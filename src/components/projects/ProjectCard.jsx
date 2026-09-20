@@ -1,23 +1,11 @@
 import TechIcon from '../common/TechIcon';
 
 export default function ProjectCard({ project, onSelectProject }) {
-  const { title, year, image, images, tags = [] } = project;
+  const { title, year, image, images = [], tags = [] } = project;
 
-  // Resolve list of images defensively (handles array, string, or 'public/' prefix)
-  const rawList = Array.isArray(images) && images.length > 0
-    ? images
-    : Array.isArray(image)
-      ? image
-      : image
-        ? [image]
-        : [];
-
-  const normalizedImages = rawList
-    .filter(Boolean)
-    .map(img => (typeof img === 'string' && img.startsWith('public/') ? '/' + img.slice(7) : img));
-
-  const thumbnail = normalizedImages[0] || (typeof image === 'string' ? image : '');
-  const imageCount = normalizedImages.length;
+  const allImages = images.length > 0 ? images : (image ? [image] : []);
+  const thumbnail = allImages[0] || '';
+  const imageCount = allImages.length;
 
   return (
     <div

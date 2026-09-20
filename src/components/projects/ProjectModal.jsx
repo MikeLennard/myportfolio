@@ -24,18 +24,9 @@ export default function ProjectModal({ project, onClose }) {
   const demo = project?.demo || null;
   const highlights = project?.highlights || [];
 
-  // Resolve list of images defensively
-  const rawList = Array.isArray(project?.images) && project.images.length > 0
+  const imageList = project?.images?.length > 0
     ? project.images
-    : Array.isArray(project?.image)
-      ? project.image
-      : project?.image
-        ? [project.image]
-        : [];
-
-  const imageList = rawList
-    .filter(Boolean)
-    .map(img => (typeof img === 'string' && img.startsWith('public/') ? '/' + img.slice(7) : img));
+    : (project?.image ? [project.image] : []);
 
   const hasMultipleImages = imageList.length > 1;
   const currentImg = imageList[activeIdx] || imageList[0] || '';
