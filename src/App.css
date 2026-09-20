@@ -131,3 +131,102 @@
   box-shadow: 0 10px 25px -5px rgba(97, 135, 100, 0.45);
   background: linear-gradient(135deg, #9CB080 0%, #618764 100%);
 }
+
+/* =========================================================
+   Harvard Resume Component & Print Styles
+   ========================================================= */
+
+.harvard-paper {
+  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.65), 0 0 0 1px rgba(255, 255, 255, 0.1);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+@media screen and (max-width: 640px) {
+  .harvard-paper {
+    padding-left: 1.25rem !important;
+    padding-right: 1.25rem !important;
+    padding-top: 1.5rem !important;
+    padding-bottom: 1.5rem !important;
+  }
+}
+
+/* High-fidelity Print to PDF Engine */
+@media print {
+  @page {
+    size: letter portrait;
+    margin: 0.45in 0.5in 0.45in 0.5in;
+  }
+
+  /* Reset body and hide web page layout chrome */
+  body, html {
+    background: #ffffff !important;
+    color: #000000 !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    -webkit-print-color-adjust: exact !important;
+    print-color-adjust: exact !important;
+  }
+
+  /* Hide navigation, action toolbar, footer, background glows */
+  header,
+  footer,
+  .no-print,
+  .ambient-glow,
+  .pulse-dot {
+    display: none !important;
+  }
+
+  /* Main container reset */
+  main {
+    padding: 0 !important;
+    margin: 0 !important;
+  }
+
+  /* Paper sheet print layout */
+  .harvard-paper {
+    box-shadow: none !important;
+    border: none !important;
+    border-radius: 0 !important;
+    max-width: 100% !important;
+    width: 100% !important;
+    padding: 0 !important;
+    margin: 0 !important;
+    background: #ffffff !important;
+    color: #000000 !important;
+  }
+
+  .harvard-paper * {
+    color: #000000 !important;
+    background: transparent !important;
+    text-shadow: none !important;
+  }
+
+  .harvard-paper h1,
+  .harvard-paper h2,
+  .harvard-paper strong {
+    color: #000000 !important;
+    font-weight: 700 !important;
+  }
+
+  .harvard-paper h2 {
+    border-bottom: 1.25pt solid #000000 !important;
+  }
+
+  .resume-section {
+    page-break-inside: auto;
+    break-inside: auto;
+  }
+
+  /* Avoid page breaks inside individual entries */
+  .resume-section > div {
+    page-break-inside: avoid;
+    break-inside: avoid;
+  }
+
+  /* Keep links clean in print */
+  .harvard-paper a {
+    text-decoration: none !important;
+    color: #000000 !important;
+  }
+}
+

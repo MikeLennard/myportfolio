@@ -3,6 +3,7 @@ import Home from './pages/Home';
 import About from './pages/About';
 import Contact from './pages/Contact';
 import Projects from './pages/Projects';
+import CV from './pages/CV';
 import NavContainer from './components/nav/NavContainer';
 import Footer from './components/layout/Footer';
 import theme from './Theme.module.css';
@@ -12,7 +13,7 @@ import './App.css';
  * App Root Component
  * Demonstrates:
  * - Functional Component Architecture
- * - React Router v7 Routing (Home, Projects, About, Contact)
+ * - React Router v7 Routing (Home, Projects, About, CV / Resume, Contact)
  * - Passing Props to child components (items to NavContainer, class to pages)
  * - Mixing CSS Modules (theme), Custom CSS (App.css), and Tailwind CSS
  */
@@ -35,6 +36,7 @@ function App() {
           <Route path="/" element={<Home class={`${theme.primary}`} />} />
           <Route path="/projects" element={<Projects class={`${theme.primary}`} />} />
           <Route path="/about" element={<About class={`${theme.primary}`} />} />
+          <Route path="/cv" element={<CV class={`${theme.primary}`} />} />
           <Route path="/contact" element={<Contact class={`${theme.primary}`} />} />
         </Routes>
       </main>

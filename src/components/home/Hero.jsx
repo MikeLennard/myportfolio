@@ -45,16 +45,15 @@ export default function Hero() {
               <span>→</span>
             </Link>
 
-            <a
-              href="#resume"
-              onClick={(e) => {
-                e.preventDefault();
-                alert(`Resume download simulation: Profile for ${personalInfo.name} loaded successfully!`);
-              }}
-              className="px-5 py-3 rounded-xl bg-[#273338]/90 hover:bg-[#2B5748] text-[#9CB080] hover:text-white text-sm font-semibold border border-[#2B5748] flex items-center gap-2 transition-all cursor-pointer shadow-md"
+            <Link
+              to="/cv"
+              className="px-5 py-3 rounded-xl bg-[#273338]/90 hover:bg-[#2B5748] text-[#9CB080] hover:text-white text-sm font-semibold border border-[#2B5748] flex items-center gap-2 transition-all cursor-pointer shadow-md group"
             >
-              <span>Download CV</span>
-            </a>
+              <svg className="w-4 h-4 text-[#9CB080] group-hover:text-white transition-colors" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+              </svg>
+              <span>View & Print CV</span>
+            </Link>
           </div>
         </div>
 

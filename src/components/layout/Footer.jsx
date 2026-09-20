@@ -25,7 +25,7 @@ export default function Footer() {
             </p>
             <div className="flex items-center gap-2 text-xs text-[#9CB080] font-medium">
               <span className="w-2 h-2 rounded-full bg-[#9CB080] pulse-dot"></span>
-              Open for freelance projects and full-time opportunities.
+              Open for freelance projects and Internship opportunities.
             </div>
           </div>
 
@@ -41,6 +41,9 @@ export default function Footer() {
               </li>
               <li>
                 <Link to="/about" className="hover:text-[#9CB080] transition-colors">About & Skills</Link>
+              </li>
+              <li>
+                <Link to="/cv" className="hover:text-[#9CB080] transition-colors">Curriculum Vitae (CV)</Link>
               </li>
               <li>
                 <Link to="/contact" className="hover:text-[#9CB080] transition-colors">Contact Me</Link>
