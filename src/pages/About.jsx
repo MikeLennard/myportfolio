@@ -3,16 +3,13 @@ import Timeline from '../components/about/Timeline';
 import SkillsMatrix from '../components/about/SkillsMatrix';
 import CertificateCard from '../components/certificates/CertificateCard';
 import CertificateModal from '../components/certificates/CertificateModal';
-import Badge from '../components/common/Badge';
 import { personalInfo, educationAndTimeline, skillsData, certificatesData } from '../data/portfolioData';
 
 /**
  * About Page Component
  * Demonstrates:
- * - Functional Component
- * - Props support (`props.class`)
- * - Composition of child components (Timeline, SkillsMatrix, Certificates, Badges)
- * - Custom CSS + Tailwind styling
+ * - Simple, clean layout
+ * - Highlights student journey, school projects, and desire to learn and collaborate
  */
 const About = (props) => {
   const [selectedCertificate, setSelectedCertificate] = useState(null);
@@ -31,27 +28,55 @@ const About = (props) => {
   return (
     <div className={`max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 animate-fadeIn ${props.class || ''}`}>
       {/* Header */}
-      <div className="text-center max-w-3xl mx-auto mb-12">
-        <h1 className="text-4xl sm:text-5xl font-extrabold text-white mt-3 mb-4 tracking-tight">
-          Dedicated to <span className="gradient-text">Software & Web Development</span>
+      <div className="text-center max-w-3xl mx-auto mb-10">
+        <h1 className="text-3xl sm:text-5xl font-extrabold text-white tracking-tight">
+          About <span className="gradient-text">Me</span>
         </h1>
-
       </div>
 
-      {/* Background Card */}
-      <div className="glass-panel p-8 rounded-3xl space-y-4 mb-12">
-        <span className="text-xs uppercase tracking-wider text-[#9CB080] font-semibold">
-          Background & Ambition
-        </span>
-        <h2 className="text-2xl sm:text-3xl font-bold text-white">
-          Transforming Ideas into Functional, Elegant Realities
-        </h2>
-        <p className="text-slate-300 leading-relaxed text-sm sm:text-base">
-          Hello! I'm <strong className="text-white">{personalInfo.name}</strong>, a developer based in {personalInfo.location}. My fascination with technology began when I realized how a few lines of code could create interactive tools used by people across the globe.
-        </p>
-        <p className="text-slate-400 leading-relaxed text-sm">
-          I build full-stack web solutions using PHP, Laravel, React, and MySQL, supported by structured databases and clean code. I focus on developing practical web systems that solve real-world problems.
-        </p>
+      {/* About Me Card with Photo */}
+      <div className="bg-[#273338]/80 border border-[#9CB080]/20 rounded-2xl p-6 sm:p-8 mb-12 shadow-lg backdrop-blur-md">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+          {/* Photo Column */}
+          <div className="lg:col-span-4 flex flex-col items-center text-center">
+            <div className="relative group">
+              {/* Subtle Ambient Glow */}
+              <div className="absolute -inset-2 bg-gradient-to-tr from-[#2B5748] via-[#618764] to-[#9CB080] rounded-2xl blur-md opacity-40 group-hover:opacity-70 transition duration-500"></div>
+
+              {/* Image Frame */}
+              <div className="relative w-48 h-56 sm:w-60 sm:h-72 rounded-2xl overflow-hidden border-2 border-[#9CB080]/40 shadow-2xl bg-[#273338]">
+                <img
+                  src={personalInfo.avatar}
+                  alt={personalInfo.name}
+                  className="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-500"
+                />
+              </div>
+            </div>
+            <div className="mt-3">
+              <h3 className="text-base font-bold text-white">{personalInfo.name}</h3>
+              <p className="text-xs text-[#9CB080] font-medium">BSIT Student · Web Developer</p>
+            </div>
+          </div>
+
+          {/* Text Column */}
+          <div className="lg:col-span-8 space-y-4">
+            <h2 className="text-2xl sm:text-3xl font-bold text-white tracking-tight">
+              Learning by Building, Eager to Grow
+            </h2>
+
+            <p className="text-[#CBD5C0] text-sm sm:text-base leading-relaxed">
+              Hello! I'm <strong className="text-white font-semibold">{personalInfo.name}</strong>, an Information Technology student at Central Luzon State University. My focus is on <strong className="text-white font-semibold">Web Development</strong>, primarily building systems with <strong className="text-white font-semibold">PHP, Laravel, React, and MySQL</strong>.
+            </p>
+
+            <p className="text-[#CBD5C0] text-sm sm:text-base leading-relaxed">
+              I'm still learning and building my foundation through our <strong className="text-white font-semibold">school projects and my university capstone</strong>. Building these projects has taught me a lot about designing databases, writing structured code, and solving practical problems.
+            </p>
+
+            <p className="text-[#CBD5C0] text-sm sm:text-base leading-relaxed">
+              I'm always eager to learn more. I am actively looking for <strong className="text-[#9CB080] font-semibold">projects, collaborations, and opportunities</strong> that will challenge me, teach me new technologies, and help me grow as a developer.
+            </p>
+          </div>
+        </div>
       </div>
 
 

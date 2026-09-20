@@ -1,6 +1,6 @@
 export const personalInfo = {
   name: "Mike Lennard Dela Cruz",
-  title: "BSIT Developer & Multimedia Specialist",
+  title: "BSIT Student & Web Developer",
   tagline: "I’m a University Scholar studying IT at Central Luzon State University, dedicated to building web applications that solve real-world problems.",
   location: "Science City of Muñoz, Nueva Ecija, Philippines",
   email: "lennarddelacruz27@gmail.com",
@@ -147,42 +147,36 @@ export const skillsData = {
     { name: "PHP" },
     { name: "React.js" },
     { name: "MySQL" },
+    { name: "JavaScript" },
     { name: "HTML" },
-    { name: "Python" },
-    { name: "Java" },
-    { name: "C" },
-    { name: "Flutter" },
-    { name: "Dart" },
     { name: "CSS" },
+    { name: "Tailwind CSS" },
+    { name: "Bootstrap" },
+    { name: "REST APIs" },
     { name: "WordPress" },
     { name: "Figma" },
-    { name: "REST APIs" },
-    { name: "JavaScript" },
-    { name: "Bootstrap" },
-    { name: "Tailwind CSS" }
+    { name: "Python" },
+    { name: "Java" },
+    { name: "C" }
   ],
   frontend: [
     { name: "React.js" },
+    { name: "JavaScript" },
     { name: "HTML" },
     { name: "CSS" },
-    { name: "WordPress" },
-    { name: "Figma" },
-    { name: "JavaScript" },
+    { name: "Tailwind CSS" },
     { name: "Bootstrap" },
-    { name: "Tailwind CSS" }
+    { name: "Figma" },
+    { name: "WordPress" }
   ],
   backend: [
     { name: "Laravel" },
     { name: "PHP" },
     { name: "MySQL" },
+    { name: "REST APIs" },
     { name: "Python" },
     { name: "Java" },
-    { name: "C" },
-    { name: "REST APIs" }
-  ],
-  mobile: [
-    { name: "Flutter" },
-    { name: "Dart" }
+    { name: "C" }
   ]
 };
 
@@ -194,7 +188,7 @@ export const educationAndTimeline = [
     sortOrder: 2023.8,
     role: "Bachelor of Science in Information Technology (Computer Programming)",
     institution: "Central Luzon State University (CLSU)",
-    description: "Grade: Consistent College Scholar - University Scholar. Major coursework in programming, systems analysis, database management, and software architecture. Actively developing the Capstone project.",
+    description: "Consistent College Scholar - University Scholar. Major coursework in programming, systems analysis, database management, and web engineering. Actively developing the Capstone project.",
     type: "education"
   },
   {
@@ -212,57 +206,28 @@ export const educationAndTimeline = [
     sortOrder: 2021.9,
     role: "Information and Communications Technology (Computer System Servicing)",
     institution: "Muñoz National High School Main",
-    description: "Specialized in Computer System Servicing, Computer Networking, hardware diagnostics, and Microsoft Office productivity suites.",
+    description: "Specialized in Computer System Servicing, computer networking, hardware diagnostics, and IT productivity tools.",
     type: "education"
   },
 
-  // Development
+  // Web Development
   {
     id: "t-capstone",
     year: "2026 (Ongoing)",
     sortOrder: 2026.3,
     role: "Capstone Developer",
     institution: "Central Luzon State University",
-    description: "Developer of the Capstone project: Enhanced Web-Based Record Management System for Indigenous People in Nueva Ecija, alongside NBL Apparel E-commerce platform.",
+    description: "Developer of the university capstone project: Enhanced Web-Based Record Management System for Indigenous People in Nueva Ecija, alongside NBL Apparel E-commerce platform.",
     type: "development"
   },
   {
     id: "t-dev-2025",
     year: "2025",
     sortOrder: 2025.2,
-    role: "Group Project Developer",
+    role: "School Project Developer",
     institution: "CLSU BSIT Academic Projects",
-    description: "Collaborated on multi-platform software projects: Patient Management System, Library Management System, Coffee Shop App, and ITour Tourist Spot Booking App.",
+    description: "Collaborated on academic web projects: Patient Management System, Library Management System, Coffee Shop System, and ITour Booking Web Platform.",
     type: "development"
-  },
-
-  // Video Editing
-  {
-    id: "t-img",
-    year: "Feb 2026 - Apr 2026",
-    sortOrder: 2026.1,
-    role: "Video Editor (Creative Division)",
-    institution: "IMG (ITSC Media Group) · Seasonal",
-    description: "Edited and produced multimedia coverage for BSIT events, with final outputs published on the official Facebook page of the CLSU Information Technology Student Council.",
-    type: "video-editing"
-  },
-  {
-    id: "t-bsit-head",
-    year: "Jul 2025 - Feb 2026",
-    sortOrder: 2025.7,
-    role: "Head Video Editor",
-    institution: "Central Luzon State University BSIT Council",
-    description: "Head of Video Editing for the CLSU BSIT Multimedia Team. Led video production workflows, mentored editors, and directed multimedia coverage across BSIT Council events.",
-    type: "video-editing"
-  },
-  {
-    id: "t-bsit-editor",
-    year: "Aug 2024 - Jul 2025",
-    sortOrder: 2024.8,
-    role: "Video Editor",
-    institution: "Central Luzon State University BSIT Council",
-    description: "Produced engaging video edits, event recaps, promotional trailers, and multimedia assets for the CLSU BSIT Multimedia Team.",
-    type: "video-editing"
   }
 ];
 

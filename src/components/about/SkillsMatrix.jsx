@@ -11,9 +11,8 @@ export default function SkillsMatrix({ skills = {} }) {
 
   const categories = [
     { key: 'all', name: 'All' },
-    { key: 'frontend', name: 'Frontend & Web' },
-    { key: 'backend', name: 'Backend & Core' },
-    { key: 'mobile', name: 'Mobile Dev' }
+    { key: 'frontend', name: 'Frontend' },
+    { key: 'backend', name: 'Backend & DB' }
   ];
 
   const allSkills = useMemo(() => {

@@ -12,20 +12,18 @@ export default function Timeline({ items = [] }) {
   const filterTabs = [
     { key: 'all', label: 'All' },
     { key: 'education', label: 'Education' },
-    { key: 'development', label: 'Development' },
-    { key: 'video-editing', label: 'Video Editing' }
+    { key: 'development', label: 'Development' }
   ];
 
   const filteredItems = items.filter((item) => {
-    if (filter === 'all') return item.type !== 'video-editing';
+    if (filter === 'all') return true;
     return item.type === filter;
   });
 
   const typePriority = {
     'education': 1,
     'development': 2,
-    'experience': 2,
-    'video-editing': 3
+    'experience': 2
   };
 
   const sortedItems = [...filteredItems].sort((a, b) => {
@@ -43,9 +41,6 @@ export default function Timeline({ items = [] }) {
 
 
   const getDotStyle = (type) => {
-    if (type === 'video-editing') {
-      return 'bg-[#9CB080] ring-2 ring-[#9CB080]/60';
-    }
     if (type === 'education') {
       return 'bg-[#618764]';
     }
@@ -60,7 +55,7 @@ export default function Timeline({ items = [] }) {
         <div className="flex flex-wrap items-center gap-2">
           {filterTabs.map((tab) => {
             const count = tab.key === 'all' 
-              ? items.filter((i) => i.type !== 'video-editing').length 
+              ? items.length 
               : items.filter((i) => i.type === tab.key).length;
 
             return (
