@@ -9,11 +9,12 @@ import TechIcon from '../common/TechIcon';
  */
 export default function CertificateModal({ certificate, onClose }) {
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
+  const [prevCertId, setPrevCertId] = useState(certificate?.id);
 
-  // Reset index when certificate changes
-  useEffect(() => {
+  if (certificate?.id !== prevCertId) {
+    setPrevCertId(certificate?.id);
     setCurrentImageIndex(0);
-  }, [certificate]);
+  }
 
   const rawImages = certificate?.images?.length > 0
     ? certificate.images

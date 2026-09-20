@@ -4,10 +4,10 @@ export const personalInfo = {
   tagline: "I’m a University Scholar studying IT at Central Luzon State University, dedicated to building web applications that solve real-world problems.",
   location: "Science City of Muñoz, Nueva Ecija, Philippines",
   email: "lennarddelacruz27@gmail.com",
+  phone: "+63 9380937982",
   avatar: "/profile.jpg",
   availableForHire: true,
   socialLinks: {
-    github: "https://github.com/MikeLennard",
     linkedin: "https://www.linkedin.com/in/mike-lennard-dela-cruz-0816381b8",
     facebook: "https://www.facebook.com/mikelennard.delacruz/"
   }
@@ -30,7 +30,6 @@ export const projectsData = [
     ],
     tags: ["Laravel", "Vite", "TailwindCSS", "MySQL"],
     featured: true,
-    github: "https://github.com/MikeLennard",
     demo: null,
     highlights: [
       "Easy search and digital storage for community records",
@@ -54,7 +53,6 @@ export const projectsData = [
     ],
     tags: ["PHP", "Bootstrap", "MySQL", "JavaScript"],
     featured: true,
-    github: "https://github.com/MikeLennard",
     demo: null,
     highlights: [
       "Browse clothing with quick category filters",
@@ -78,7 +76,6 @@ export const projectsData = [
     ],
     tags: ["PHP", "MySQL", "Bootstrap", "JavaScript"],
     featured: true,
-    github: "https://github.com/MikeLennard",
     demo: null,
     highlights: [
       "Digital patient registration and medical records",
@@ -101,7 +98,6 @@ export const projectsData = [
     ],
     tags: ["Flutter", "Dart", "Mobile App"],
     featured: false,
-    github: "https://github.com/MikeLennard",
     demo: null,
     highlights: [
       "Explore local tourist attractions with photos and guides",
@@ -124,7 +120,6 @@ export const projectsData = [
     ],
     tags: ["PHP", "MySQL", "HTML", "CSS"],
     featured: false,
-    github: "https://github.com/MikeLennard",
     demo: null,
     highlights: [
       "Track book inventory and who borrowed each book",

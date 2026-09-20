@@ -2,7 +2,6 @@ import { useState } from 'react';
 import { projectsData } from '../data/portfolioData';
 import ProjectCard from '../components/projects/ProjectCard';
 import ProjectModal from '../components/projects/ProjectModal';
-import Badge from '../components/common/Badge';
 
 /**
  * Projects Page Component

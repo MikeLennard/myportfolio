@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
 import Timeline from '../components/about/Timeline';
-import SkillsMatrix from '../components/about/SkillsMatrix';
+import TechStack from '../components/about/TechStack';
 import CertificateCard from '../components/certificates/CertificateCard';
 import CertificateModal from '../components/certificates/CertificateModal';
 import { personalInfo, educationAndTimeline, skillsData, certificatesData } from '../data/portfolioData';
@@ -97,10 +97,10 @@ const About = (props) => {
         {/* Skills Matrix on the Right */}
         <div className="lg:col-span-5">
           <div className="mb-6">
-            <span className="text-xs font-semibold uppercase tracking-wider text-[#9CB080]">Proficiency</span>
+            <span className="text-xs font-semibold uppercase tracking-wider text-[#9CB080]">Toolkit</span>
             <h2 className="text-2xl font-bold text-white mt-1">Technical Skills</h2>
           </div>
-          <SkillsMatrix skills={skillsData} />
+          <TechStack skills={skillsData} />
         </div>
       </div>
 

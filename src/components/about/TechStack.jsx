@@ -2,11 +2,11 @@ import { useState, useMemo } from 'react';
 import TechIcon from '../common/TechIcon';
 
 /**
- * SkillsMatrix Component
+ * TechStack Component
  * Styled with custom palette (#9CB080, #618764, #2B5748, #273338)
- * Clean tech chip layout with 'All' filter support
+ * Interactive tech chip grid with category filtering support
  */
-export default function SkillsMatrix({ skills = {} }) {
+export default function TechStack({ skills = {} }) {
   const [activeCategory, setActiveCategory] = useState('all');
 
   const categories = [
@@ -34,7 +34,9 @@ export default function SkillsMatrix({ skills = {} }) {
   return (
     <div className="glass-panel p-6 rounded-2xl space-y-6 hover:border-[#9CB080]/50">
       <div className="flex flex-wrap items-center justify-between gap-3 pb-4 border-b border-[#2B5748]">
-        <h3 className="text-lg font-bold text-white">Skill Matrix</h3>
+        <span className="text-xs font-medium text-[#CBD5C0] bg-[#273338] px-2.5 py-1 rounded-lg border border-[#2B5748]">
+          {currentSkills.length} Technologies
+        </span>
 
         {/* Tab Buttons */}
         <div className="flex flex-wrap bg-[#273338] p-1 rounded-xl border border-[#2B5748] gap-1">

@@ -1,5 +1,5 @@
 # MIKE LENNARD DELA CRUZ
-Science City of Muñoz, Nueva Ecija, Philippines • lennarddelacruz27@gmail.com • [LinkedIn](https://www.linkedin.com/in/mike-lennard-dela-cruz-0816381b8) • [GitHub](https://github.com/MikeLennard)
+Science City of Muñoz, Nueva Ecija, Philippines • lennarddelacruz27@gmail.com • +63 9380937982 • [LinkedIn](https://www.linkedin.com/in/mike-lennard-dela-cruz-0816381b8) • [GitHub](https://github.com/MikeLennard)
 
 ---
 

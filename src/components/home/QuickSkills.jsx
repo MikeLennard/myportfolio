@@ -1,5 +1,4 @@
 import { useState, useMemo } from 'react';
-import Badge from '../common/Badge';
 import TechIcon from '../common/TechIcon';
 
 /**

@@ -4,12 +4,19 @@ import { useState } from 'react';
  * ContactInfo Component
  */
 export default function ContactInfo({ info }) {
-  const [copied, setCopied] = useState(false);
+  const [copiedEmail, setCopiedEmail] = useState(false);
+  const [copiedPhone, setCopiedPhone] = useState(false);
 
   const handleCopyEmail = () => {
     navigator.clipboard.writeText(info.email);
-    setCopied(true);
-    setTimeout(() => setCopied(false), 2000);
+    setCopiedEmail(true);
+    setTimeout(() => setCopiedEmail(false), 2000);
+  };
+
+  const handleCopyPhone = () => {
+    navigator.clipboard.writeText(info.phone || '+63 9380937982');
+    setCopiedPhone(true);
+    setTimeout(() => setCopiedPhone(false), 2000);
   };
 
   return (
@@ -37,7 +44,32 @@ export default function ContactInfo({ info }) {
             className="px-3 py-1.5 rounded-lg text-xs font-medium bg-[#273338] hover:bg-[#2B5748] border border-[#2B5748] text-[#CBD5C0] hover:text-white transition-colors cursor-pointer"
             title="Copy email to clipboard"
           >
-            {copied ? 'Copied! ✓' : 'Copy'}
+            {copiedEmail ? 'Copied! ✓' : 'Copy'}
+          </button>
+        </div>
+
+        {/* Phone Number Card with Copy Feature */}
+        <div className="glass-panel p-5 rounded-2xl flex items-center justify-between hover:border-[#9CB080]/50 transition-colors">
+          <div className="flex items-center gap-3">
+            <div className="w-10 h-10 rounded-xl bg-[#2B5748]/70 border border-[#618764]/40 flex items-center justify-center text-[#9CB080]">
+              <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2">
+                <path strokeLinecap="round" strokeLinejoin="round" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
+              </svg>
+            </div>
+            <div>
+              <div className="text-xs text-[#CBD5C0]">Phone Number</div>
+              <a href={`tel:${info.phone || '+639380937982'}`} className="text-sm font-semibold text-white hover:text-[#9CB080] transition-colors">
+                {info.phone || '+63 9380937982'}
+              </a>
+            </div>
+          </div>
+          <button
+            type="button"
+            onClick={handleCopyPhone}
+            className="px-3 py-1.5 rounded-lg text-xs font-medium bg-[#273338] hover:bg-[#2B5748] border border-[#2B5748] text-[#CBD5C0] hover:text-white transition-colors cursor-pointer"
+            title="Copy phone number to clipboard"
+          >
+            {copiedPhone ? 'Copied! ✓' : 'Copy'}
           </button>
         </div>
 

@@ -73,6 +73,10 @@ const CV = () => {
                 {personalInfo.email}
               </a>
               <span className="mx-1.5 font-bold text-gray-400">•</span>
+              <a href={`tel:${personalInfo.phone}`} className="text-black hover:underline">
+                {personalInfo.phone}
+              </a>
+              <span className="mx-1.5 font-bold text-gray-400">•</span>
               <a
                 href={personalInfo.socialLinks.linkedin}
                 target="_blank"
