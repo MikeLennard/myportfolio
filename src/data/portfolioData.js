@@ -14,10 +14,10 @@ export const personalInfo = {
 };
 
 export const dashboardStats = [
-  { id: 1, label: "Academic & Capstone Projects", value: "6+", description: "Web, mobile & database systems", icon: "🚀" },
+  { id: 1, label: "Academic & Capstone Projects", value: "5+", description: "Web platforms & database systems", icon: "🚀" },
   { id: 2, label: "Academic Standing", value: "Scholar", description: "Consistent College - University Scholar", icon: "🎓" },
-  { id: 3, label: "Multimedia Leadership", value: "Head Editor", description: "CLSU BSIT Council & IMG Media", icon: "🎬" },
-  { id: 4, label: "Technology Breadth", value: "Multi-Stack", description: "Dart, Flutter, React, PHP & Media", icon: "⚡" }
+  { id: 3, label: "Specialization", value: "Web Dev", description: "Full-stack & database architecture", icon: "💻" },
+  { id: 4, label: "Technology Breadth", value: "Multi-Stack", description: "PHP, Laravel, React, MySQL", icon: "⚡" }
 ];
 
 export const projectsData = [

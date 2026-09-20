@@ -32,85 +32,26 @@ const About = (props) => {
     <div className={`max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 animate-fadeIn ${props.class || ''}`}>
       {/* Header */}
       <div className="text-center max-w-3xl mx-auto mb-12">
-        <Badge text="About Me" variant="primary" size="md" />
         <h1 className="text-4xl sm:text-5xl font-extrabold text-white mt-3 mb-4 tracking-tight">
-          Dedicated to <span className="gradient-text">Software & Multimedia</span>
+          Dedicated to <span className="gradient-text">Software & Web Development</span>
         </h1>
-        <p className="text-[#CBD5C0] text-base sm:text-lg leading-relaxed">
-          BSIT Student & Consistent University Scholar at Central Luzon State University (CLSU) — specialized in Web/Mobile Development and Creative Media.
-        </p>
+
       </div>
 
-      {/* Bio Overview Grid */}
-      <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 mb-12 items-center">
-        {/* Bio Text */}
-        <div className="lg:col-span-7 glass-panel p-8 rounded-3xl space-y-4">
-          <span className="text-xs uppercase tracking-wider text-[#9CB080] font-semibold">
-            Background & Ambition
-          </span>
-          <h2 className="text-2xl sm:text-3xl font-bold text-white">
-            Transforming Ideas into Functional, Elegant Realities
-          </h2>
-          <p className="text-slate-300 leading-relaxed text-sm sm:text-base">
-            Hello! I'm <strong className="text-white">{personalInfo.name}</strong>, a developer based in {personalInfo.location}. My fascination with technology began when I realized how a few lines of code could create interactive tools used by people across the globe.
-          </p>
-          <p className="text-slate-400 leading-relaxed text-sm">
-            I develop full-stack web solutions and cross-platform mobile apps with Flutter, Dart, React, and PHP, supported by well-structured database systems. Along with software engineering, I am passionate about creative media—serving as Head Video Editor and multimedia director for student council initiatives.
-          </p>
-
-          <div className="pt-2 flex flex-wrap gap-3">
-            <div className="bg-[#273338] border border-[#2B5748] px-4 py-2 rounded-xl text-xs">
-              <span className="text-[#CBD5C0]">Location:</span>{' '}
-              <span className="text-white font-medium">{personalInfo.location}</span>
-            </div>
-            <div className="bg-[#273338] border border-[#2B5748] px-4 py-2 rounded-xl text-xs">
-              <span className="text-[#CBD5C0]">Status:</span>{' '}
-              <span className="text-[#9CB080] font-medium">University Scholar</span>
-            </div>
-            <div className="bg-[#273338] border border-[#2B5748] px-4 py-2 rounded-xl text-xs">
-              <span className="text-[#CBD5C0]">Primary Focus:</span>{' '}
-              <span className="text-[#9CB080] font-medium">Web, Mobile & Video Media</span>
-            </div>
-          </div>
-        </div>
-
-        {/* Quick Highlights / Image Placeholder Box */}
-        <div className="lg:col-span-5 flex flex-col gap-4">
-          <div className="glass-panel p-6 rounded-3xl border border-[#9CB080]/30 glow-border">
-            <h3 className="text-lg font-bold text-white mb-2">Key Highlights</h3>
-            <ul className="space-y-3 text-sm text-[#f1f5f0]">
-              <li className="flex items-center gap-2">
-                <span className="text-[#9CB080] font-bold">✓</span>
-                Consistent College Scholar - University Scholar at CLSU
-              </li>
-              <li className="flex items-center gap-2">
-                <span className="text-[#9CB080] font-bold">✓</span>
-                Full-Stack Web & Mobile (React, Flutter, Dart, PHP, MySQL)
-              </li>
-              <li className="flex items-center gap-2">
-                <span className="text-[#9CB080] font-bold">✓</span>
-                Head Video Editor for CLSU BSIT Multimedia Team & IMG
-              </li>
-              <li className="flex items-center gap-2">
-                <span className="text-[#9CB080] font-bold">✓</span>
-                Group Project Developer & Indigenous Peoples Capstone Lead
-              </li>
-            </ul>
-          </div>
-
-          <div className="glass-panel p-6 rounded-3xl bg-gradient-to-br from-[#2B5748]/50 to-[#273338]">
-            <h4 className="text-sm font-semibold text-[#f1f5f0] mb-1">Looking for a collaborator?</h4>
-            <p className="text-xs text-[#CBD5C0] mb-3">
-              Feel free to reach out for project inquiries, tech discussions, or freelance gigs.
-            </p>
-            <a
-              href={`mailto:${personalInfo.email}`}
-              className="inline-block text-xs font-bold text-[#9CB080] hover:text-white transition-colors"
-            >
-              {personalInfo.email} →
-            </a>
-          </div>
-        </div>
+      {/* Background Card */}
+      <div className="glass-panel p-8 rounded-3xl space-y-4 mb-12">
+        <span className="text-xs uppercase tracking-wider text-[#9CB080] font-semibold">
+          Background & Ambition
+        </span>
+        <h2 className="text-2xl sm:text-3xl font-bold text-white">
+          Transforming Ideas into Functional, Elegant Realities
+        </h2>
+        <p className="text-slate-300 leading-relaxed text-sm sm:text-base">
+          Hello! I'm <strong className="text-white">{personalInfo.name}</strong>, a developer based in {personalInfo.location}. My fascination with technology began when I realized how a few lines of code could create interactive tools used by people across the globe.
+        </p>
+        <p className="text-slate-400 leading-relaxed text-sm">
+          I build full-stack web solutions using PHP, Laravel, React, and MySQL, supported by structured databases and clean code. I focus on developing practical web systems that solve real-world problems.
+        </p>
       </div>
 
 
