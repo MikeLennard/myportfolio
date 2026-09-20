@@ -29,8 +29,14 @@ export const projectsData = [
     year: "2026 (Ongoing)",
     shortDesc: "Comprehensive web-based record management system tailored for indigenous communities in Nueva Ecija, ensuring organized, secure, and accessible documentation.",
     fullDesc: "An ongoing capstone development project designed to streamline and digitize demographic, genealogical, and administrative records for Indigenous Peoples in Nueva Ecija. Features role-based access control, secure record archiving, intuitive querying, and customized community administration tools.",
-    image: "https://images.unsplash.com/photo-1450133064473-71024230f91b?auto=format&fit=crop&w=800&q=80",
-    tags: ["PHP", "CSS", "MySQL", "Web Development", "Record Management"],
+    images: [
+      "/projects/ncip1.png",
+      "/projects/ncip2.png",
+      "/projects/ncip3.png",
+      "/projects/ncip4.png",
+      "/projects/ncip5.png"
+    ],
+    tags: ["Laravel", "Vite", "TailwindCSS", "MySQL"],
     featured: true,
     github: "https://github.com/MikeLennard",
     demo: null,
@@ -47,8 +53,14 @@ export const projectsData = [
     role: "Group Project Developer",
     shortDesc: "E-commerce web platform for apparel brand NBL featuring interactive clothing catalogs, product filtering, and shopping cart flow.",
     fullDesc: "Contributed as a Group Project Developer in 2026 to build NBL Apparel, a responsive e-commerce web platform. Implemented product showcases, dynamic apparel categorization, responsive cart state, and a modern customer shopping experience.",
-    image: "https://images.unsplash.com/photo-1441986300917-64674bd600d8?auto=format&fit=crop&w=800&q=80",
-    tags: ["React", "JavaScript", "Tailwind CSS", "E-Commerce", "Web Development"],
+    images: [
+      "/projects/nbl1.png",
+      "/projects/nbl2.png",
+      "/projects/nbl3.png",
+      "/projects/nbl4.png",
+      "/projects/nbl5.png"
+    ],
+    tags: ["PHP", "Bootstrap", "MySQL", "JavaScript"],
     featured: true,
     github: "https://github.com/MikeLennard",
     demo: null,
@@ -59,57 +71,50 @@ export const projectsData = [
     ]
   },
   {
-    id: "proj-itour",
-    title: "ITour - Tourist Spots Booking Application",
-    year: "2025",
-    role: "Group Project Developer",
-    shortDesc: "Cross-platform mobile booking app for discovering and reserving tourist destinations and attractions built with Flutter.",
-    fullDesc: "Contributed as a Group Project Developer in 2025 using the Flutter framework. Engineered mobile screens, destination spot catalogs, reservation logic, and interactive traveler workflows to facilitate tourism discovery and local spot bookings.",
-    image: "https://images.unsplash.com/photo-1488646953014-85cb44e25828?auto=format&fit=crop&w=800&q=80",
-    tags: ["Flutter", "Dart", "Mobile App", "Booking System", "UI/UX"],
-    featured: true,
-    github: "https://github.com/MikeLennard",
-    demo: null,
-    highlights: [
-      "Cross-platform mobile app built with Flutter and Dart",
-      "Tourist destination exploration and reservation flow",
-      "Interactive mobile UI components and responsive layout"
-    ]
-  },
-  {
-    id: "proj-coffee",
-    title: "Coffee Shop Ordering Application",
-    year: "2025",
-    role: "Group Project Developer",
-    shortDesc: "Mobile coffee shop ordering application built with Dart for customized drink orders, menu exploration, and price tallying.",
-    fullDesc: "Contributed as a Group Project Developer in 2025 to develop a dedicated mobile ordering app for a coffee shop using Dart. Designed custom beverage sizing, syrup/add-on selections, real-time bill calculations, and an intuitive ordering interface.",
-    image: "https://images.unsplash.com/photo-1501339847302-ac426a4a7cbb?auto=format&fit=crop&w=800&q=80",
-    tags: ["Dart", "Mobile App", "UI/UX", "State Management"],
-    featured: false,
-    github: "https://github.com/MikeLennard",
-    demo: null,
-    highlights: [
-      "Custom beverage ordering logic with instant pricing",
-      "Menu categorization and smooth state handling in Dart",
-      "Clean, user-friendly mobile ordering screens"
-    ]
-  },
-  {
     id: "proj-patient",
     title: "Patient Management System",
     year: "2025",
     role: "Group Project Developer",
     shortDesc: "Healthcare record management system for patient intake, medical history tracking, and clinical appointment management.",
     fullDesc: "Collaborated as a Group Project Developer in 2025 on a web-based Patient Management System. Built database-backed records handling for patient demographics, outpatient visits, clinical logs, and appointment scheduling.",
-    image: "https://images.unsplash.com/photo-1519494026892-80bbd2d6fd0d?auto=format&fit=crop&w=800&q=80",
-    tags: ["PHP", "MySQL", "Database Management", "Healthcare System"],
-    featured: false,
+    images: [
+      "/projects/pms1.png",
+      "/projects/pms2.png",
+      "/projects/pms3.png",
+      "/projects/pms4.png",
+      "/projects/pms5.png"
+    ],
+    tags: ["PHP", "MySQL", "Bootstrap", "JavaScript"],
+    featured: true,
     github: "https://github.com/MikeLennard",
     demo: null,
     highlights: [
       "Centralized patient medical records and intake management",
       "Secure clinical database structure with relational tables",
       "Appointment logging, prescription tracking, and query filters"
+    ]
+  },
+  {
+    id: "proj-itour",
+    title: "ITour - Tourist Spots Booking Application",
+    year: "2025",
+    role: "Group Project Developer",
+    shortDesc: "Cross-platform mobile booking app for discovering and reserving tourist destinations and attractions built with Flutter.",
+    fullDesc: "Contributed as a Group Project Developer in 2025 using the Flutter framework. Engineered mobile screens, destination spot catalogs, reservation logic, and interactive traveler workflows to facilitate tourism discovery and local spot bookings.",
+    images: [
+      "/projects/Itour1.png",
+      "/projects/Itour2.png",
+      "/projects/Itour3.png",
+      "/projects/Itour4.png"
+    ],
+    tags: ["Flutter", "Dart", "Mobile App"],
+    featured: false,
+    github: "https://github.com/MikeLennard",
+    demo: null,
+    highlights: [
+      "Cross-platform mobile app built with Flutter and Dart",
+      "Tourist destination exploration and reservation flow",
+      "Interactive mobile UI components and responsive layout"
     ]
   },
   {

@@ -19,12 +19,11 @@ export default function Projects() {
     <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 animate-fadeIn">
       {/* Header Section */}
       <div className="text-center max-w-3xl mx-auto mb-12">
-        <Badge text="Portfolio" variant="primary" size="md" />
         <h1 className="text-4xl sm:text-5xl font-extrabold text-white mt-3 mb-4 tracking-tight">
           Featured <span className="gradient-text">Projects & Work</span>
         </h1>
         <p className="text-[#CBD5C0] text-base sm:text-lg leading-relaxed">
-          A showcase of capstone and academic development projects including web platforms, mobile applications with Flutter/Dart, and record management systems.
+          A showcase of capstone and academic development projects.
         </p>
       </div>
 
