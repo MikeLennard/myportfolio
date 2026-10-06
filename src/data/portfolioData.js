@@ -262,7 +262,7 @@ export const certificatesData = [
     image: "/certificates/NC2.png",
     skills: ["Network Administration", "Computer Network"],
     description: "National Certificate II validating technical competency in computer hardware assembly, OS installation and configuration, setup of computer networks and servers, and maintenance and repair of computer systems.",
-    featured: true
+    featured: false
   },
   {
     id: "cert-webdev-dict",
@@ -278,7 +278,7 @@ export const certificatesData = [
     ],
     skills: ["HTML", "CSS", "JavaScript"],
     description: "Government-accredited ICT training series covering WebDev via Cloud (WD008), Basic JavaScript for WebDev (WD003), and Designing a Web Page using HTML and CSS (WD002).",
-    featured: true
+    featured: false
   },
   {
     id: "cert-dataviz-coursera",
@@ -306,7 +306,7 @@ export const certificatesData = [
     ],
     skills: ["Packet Tracer", "Network Administration"],
     description: "Explored advanced network topology design, simulation of enterprise LAN/WAN environments, routing tables, and real-time packet flow verification using Cisco Packet Tracer.",
-    featured: true
+    featured: false
   },
   {
     id: "cert-it-support-sec",
@@ -354,7 +354,22 @@ export const certificatesData = [
     skills: ["Create Reports", "Communication "],
     description: "Coursework in structured data synthesis, analytical reporting, technical documentation standards, and stakeholder communication.",
     featured: false
+  },
+  {
+    id: "aws",
+    title: "AWS Academy Graduate - Cloud Foundations - Training Badge",
+    issuer: "Amazon Web Services (AWS)",
+    issuerLogo: "aws",
+    issueDate: "2026",
+    images: [
+      "/certificates/aws1.png",
+      "/certificates/aws2.png"
+    ],
+    skills: ["AWS", "Cloud Computing"],
+    description: "Validated foundational knowledge of cloud computing concepts, AWS core services, security, architecture, and billing.",
+    featured: true
   }
+
 ];
 
 

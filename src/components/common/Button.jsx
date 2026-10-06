@@ -1,7 +1,4 @@
-/**
- * Button Component
- * Functional component showcasing props and event handling with custom palette
- */
+
 export default function Button({
   children,
   onClick,

@@ -1,8 +1,5 @@
 import { useState } from 'react';
 
-/**
- * ContactInfo Component
- */
 export default function ContactInfo({ info }) {
   const [copiedEmail, setCopiedEmail] = useState(false);
   const [copiedPhone, setCopiedPhone] = useState(false);

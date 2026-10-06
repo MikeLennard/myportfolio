@@ -1,7 +1,3 @@
-/**
- * TechIcon Component
- * Renders authentic SVG logos for developer technologies and frameworks
- */
 export default function TechIcon({ name, className = "w-5 h-5" }) {
   const normalized = (name || '').toLowerCase();
 

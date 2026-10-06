@@ -5,12 +5,6 @@ import CertificateCard from '../components/certificates/CertificateCard';
 import CertificateModal from '../components/certificates/CertificateModal';
 import { personalInfo, educationAndTimeline, skillsData, certificatesData } from '../data/portfolioData';
 
-/**
- * About Page Component
- * Demonstrates:
- * - Simple, clean layout
- * - Highlights student journey, school projects, and desire to learn and collaborate
- */
 const About = (props) => {
   const [selectedCertificate, setSelectedCertificate] = useState(null);
 
